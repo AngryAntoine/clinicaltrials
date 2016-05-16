@@ -1,0 +1,875 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-05-08 21:05+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: clinicaltrials/settings.py:115
+msgid "Ukrainian"
+msgstr "Українська"
+
+#: clinicaltrials/settings.py:116
+msgid "English"
+msgstr "Англійська"
+
+#: study/admin.py:10
+msgid "Item"
+msgstr ""
+
+#: study/admin.py:12
+#, fuzzy
+#| msgid "description"
+msgid "Description"
+msgstr "опис"
+
+#: study/models.py:11
+msgid "condition name"
+msgstr "назва дослідження"
+
+#: study/models.py:12 study/models.py:330 study/models.py:344
+msgid "description"
+msgstr "опис"
+
+#: study/models.py:18
+msgid "condition"
+msgstr "умова"
+
+#: study/models.py:19
+msgid "conditions"
+msgstr "умови"
+
+#: study/models.py:27 study/models.py:59
+msgid "Choose condition"
+msgstr "оберіть умову"
+
+#: study/models.py:28 study/models.py:60
+msgid "Andrology"
+msgstr "Андрологія"
+
+#: study/models.py:29 study/models.py:61
+msgid "Asthma & Allergy"
+msgstr "Астма і алергія"
+
+#: study/models.py:30 study/models.py:62
+msgid "Cardiology & Vascular Diseases"
+msgstr ""
+
+#: study/models.py:31 study/models.py:63
+msgid "Dermatology"
+msgstr ""
+
+#: study/models.py:32 study/models.py:64
+msgid "Dentistry"
+msgstr ""
+
+#: study/models.py:33 study/models.py:65
+msgid "Endocrinology"
+msgstr ""
+
+#: study/models.py:34 study/models.py:66
+msgid "Gastroentorology"
+msgstr ""
+
+#: study/models.py:35 study/models.py:67
+msgid "Gerontology & Geriatrics"
+msgstr ""
+
+#: study/models.py:36 study/models.py:68
+msgid "Healthy Volunteers"
+msgstr ""
+
+#: study/models.py:37 study/models.py:69
+msgid "Hematology"
+msgstr ""
+
+#: study/models.py:38 study/models.py:70
+msgid "Hepatoogy"
+msgstr ""
+
+#: study/models.py:39 study/models.py:71
+msgid "Immunology"
+msgstr ""
+
+#: study/models.py:40 study/models.py:72
+msgid "Infectious Diseases"
+msgstr ""
+
+#: study/models.py:41 study/models.py:73
+msgid "Medical Device"
+msgstr ""
+
+#: study/models.py:42 study/models.py:74
+msgid "Neurology"
+msgstr ""
+
+#: study/models.py:43 study/models.py:75
+msgid "Nephrology"
+msgstr ""
+
+#: study/models.py:44 study/models.py:76
+msgid "Obstetrics & Gynaecology (OB&GYN)"
+msgstr ""
+
+#: study/models.py:45 study/models.py:77
+msgid "Oncology"
+msgstr ""
+
+#: study/models.py:46 study/models.py:78
+msgid "Ophthalmology"
+msgstr ""
+
+#: study/models.py:47 study/models.py:79
+msgid "Otorhinolaryngology"
+msgstr ""
+
+#: study/models.py:48 study/models.py:80
+msgid "Pediatrics"
+msgstr ""
+
+#: study/models.py:49 study/models.py:81
+msgid "Plastic Surgery"
+msgstr ""
+
+#: study/models.py:50 study/models.py:82
+msgid "Psychiatry"
+msgstr ""
+
+#: study/models.py:51 study/models.py:83
+msgid "Pulmonology"
+msgstr ""
+
+#: study/models.py:52 study/models.py:84
+msgid "Reproductive Medicine"
+msgstr ""
+
+#: study/models.py:53 study/models.py:85
+msgid "Rheumatology"
+msgstr ""
+
+#: study/models.py:54 study/models.py:86
+msgid "Surgery"
+msgstr ""
+
+#: study/models.py:55 study/models.py:87
+msgid "Traumatology"
+msgstr ""
+
+#: study/models.py:56 study/models.py:88
+msgid "Urology"
+msgstr ""
+
+#: study/models.py:57 study/models.py:89
+msgid "Venerology"
+msgstr ""
+
+#: study/models.py:91
+msgid "decease name"
+msgstr ""
+
+#: study/models.py:95 study/models.py:105
+msgid "therapeutic area"
+msgstr ""
+
+#: study/models.py:96
+msgid "therapeutic areas"
+msgstr ""
+
+#: study/models.py:104
+msgid "disease name"
+msgstr ""
+
+#: study/models.py:109
+msgid "disease"
+msgstr ""
+
+#: study/models.py:110
+msgid "diseases"
+msgstr ""
+
+#: study/models.py:120
+msgid "decease_name"
+msgstr ""
+
+#: study/models.py:121
+msgid "protocol title"
+msgstr ""
+
+#: study/models.py:122
+msgid "detailed description"
+msgstr ""
+
+#: study/models.py:141
+msgid "phase"
+msgstr ""
+
+#: study/models.py:142 study/models.py:145
+msgid "Interventional"
+msgstr ""
+
+#: study/models.py:143 study/models.py:146
+msgid "Non-Interventional"
+msgstr ""
+
+#: study/models.py:148
+msgid "study type"
+msgstr ""
+
+#: study/models.py:150 study/models.py:156
+msgid "Endpoint Classification"
+msgstr ""
+
+#: study/models.py:151
+msgid "Intervention Model"
+msgstr ""
+
+#: study/models.py:152 study/models.py:158
+msgid "Masking"
+msgstr ""
+
+#: study/models.py:153
+msgid "Primary Purpose"
+msgstr ""
+
+#: study/models.py:155
+msgid "Allocation"
+msgstr ""
+
+#: study/models.py:157
+msgid "Intervention model"
+msgstr ""
+
+#: study/models.py:159
+msgid "Primary purpose"
+msgstr ""
+
+#: study/models.py:161
+msgid "study design"
+msgstr ""
+
+#: study/models.py:163
+msgid "purpose"
+msgstr ""
+
+#: study/models.py:176
+msgid "sponsor name"
+msgstr ""
+
+#: study/models.py:177 study/models.py:189 study/models.py:592
+msgid "address"
+msgstr ""
+
+#: study/models.py:178 study/models.py:190
+msgid "phone"
+msgstr ""
+
+#: study/models.py:179 study/models.py:191
+msgid "email"
+msgstr ""
+
+#: study/models.py:180 study/models.py:192
+msgid "link"
+msgstr ""
+
+#: study/models.py:188
+msgid "company name"
+msgstr ""
+
+#: study/models.py:196
+msgid "company"
+msgstr ""
+
+#: study/models.py:197
+msgid "companies"
+msgstr ""
+
+#: study/models.py:207
+msgid "Sponsor's protocol number"
+msgstr ""
+
+#: study/models.py:208
+msgid "ClinicalTrials.com.ua Identifier"
+msgstr ""
+
+#: study/models.py:210
+msgid "ClinicalTrials.gov Identifier"
+msgstr ""
+
+#: study/models.py:212
+msgid "ClinicalTrials.gov link"
+msgstr ""
+
+#: study/models.py:213
+msgid "EudraCT number"
+msgstr ""
+
+#: study/models.py:214
+msgid "EudraCT link"
+msgstr ""
+
+#: study/models.py:215
+msgid "MOH of Ukraine"
+msgstr ""
+
+#: study/models.py:216
+msgid "MOH of Ukraine link"
+msgstr ""
+
+#: study/models.py:217
+msgid "sponsor"
+msgstr ""
+
+#: study/models.py:219
+msgid "Estimated enrollment in general according to clinicaltrials.com"
+msgstr ""
+
+#: study/models.py:221
+msgid "Estimated enrollment in general according to MOH of Ukraine"
+msgstr ""
+
+#: study/models.py:223
+msgid "Estimated enrollment in general according to \"Company\""
+msgstr ""
+
+#: study/models.py:225
+msgid "Estimated enrollment in Ukraine according to MOH of Ukraine"
+msgstr ""
+
+#: study/models.py:226
+msgid "Estimated enrollment in Ukraine according to \"Company\""
+msgstr ""
+
+#: study/models.py:228
+msgid "start date of enrolling patients in Ukraine"
+msgstr ""
+
+#: study/models.py:229 study/models.py:239 study/models.py:603
+#: study/models.py:607
+msgid "Not recruiting yet"
+msgstr ""
+
+#: study/models.py:230 study/models.py:240 study/models.py:604
+#: study/models.py:608
+msgid "Recruiting"
+msgstr ""
+
+#: study/models.py:231
+msgid "On invitation recruiting"
+msgstr ""
+
+#: study/models.py:232 study/models.py:242 study/models.py:609
+msgid "Not recruiting"
+msgstr ""
+
+#: study/models.py:233
+msgid "Study end"
+msgstr ""
+
+#: study/models.py:234
+msgid "Study pause"
+msgstr ""
+
+#: study/models.py:235
+msgid "Study terminated before recruiting"
+msgstr ""
+
+#: study/models.py:236
+msgid "Study status unknown"
+msgstr ""
+
+#: study/models.py:237
+msgid "Not healthy recruits"
+msgstr ""
+
+#: study/models.py:241
+msgid "Invitation needed"
+msgstr ""
+
+#: study/models.py:243
+msgid "Study finished"
+msgstr ""
+
+#: study/models.py:244
+msgid "Study paused"
+msgstr ""
+
+#: study/models.py:245
+msgid "Study ended before recruiting"
+msgstr ""
+
+#: study/models.py:246
+msgid "Unknown study status"
+msgstr ""
+
+#: study/models.py:247
+msgid "Recruits with decease only"
+msgstr ""
+
+#: study/models.py:249
+msgid "study status"
+msgstr ""
+
+#: study/models.py:250
+msgid "study completion date"
+msgstr ""
+
+#: study/models.py:251
+msgid "last updated date"
+msgstr ""
+
+#: study/models.py:258
+msgid "study identifier"
+msgstr ""
+
+#: study/models.py:259
+msgid "study identifiers"
+msgstr ""
+
+#: study/models.py:282
+msgid "form"
+msgstr ""
+
+#: study/models.py:283
+msgid "doze"
+msgstr ""
+
+#: study/models.py:284 study/models.py:298
+msgid "manufacturer"
+msgstr ""
+
+#: study/models.py:285 study/models.py:299
+msgid "country"
+msgstr ""
+
+#: study/models.py:288
+msgid "comparator"
+msgstr ""
+
+#: study/models.py:289 study/models.py:315
+msgid "comparators"
+msgstr ""
+
+#: study/models.py:297 study/models.py:312 study/models.py:329
+#: study/models.py:343 study/models.py:357 study/models.py:390
+#: study/models.py:403 study/models.py:416 study/models.py:429
+#: study/models.py:465 study/models.py:513
+msgid "name"
+msgstr ""
+
+#: study/models.py:303
+msgid "study related material"
+msgstr ""
+
+#: study/models.py:304 study/models.py:316
+msgid "study related materials"
+msgstr ""
+
+#: study/models.py:313
+msgid "investigation_products"
+msgstr ""
+
+#: study/models.py:320
+msgid "material"
+msgstr ""
+
+#: study/models.py:321
+msgid "materials"
+msgstr ""
+
+#: study/models.py:334 study/models.py:335 study/models.py:376
+msgid "inclusion criteria"
+msgstr ""
+
+#: study/models.py:348 study/models.py:349 study/models.py:377
+msgid "exclusion criteria"
+msgstr ""
+
+#: study/models.py:358
+msgid "age"
+msgstr ""
+
+#: study/models.py:359 study/models.py:363
+msgid "Female and Male"
+msgstr ""
+
+#: study/models.py:360 study/models.py:364
+msgid "Female"
+msgstr ""
+
+#: study/models.py:361 study/models.py:365
+msgid "Male"
+msgstr ""
+
+#: study/models.py:367
+msgid "gender"
+msgstr ""
+
+#: study/models.py:368 study/models.py:371
+msgid "Yes"
+msgstr ""
+
+#: study/models.py:369 study/models.py:372
+msgid "No"
+msgstr ""
+
+#: study/models.py:374
+msgid "healthy volunteers"
+msgstr ""
+
+#: study/models.py:381 study/models.py:382
+msgid "eligibility"
+msgstr ""
+
+#: study/models.py:394 study/models.py:395
+msgid "contacts"
+msgstr ""
+
+#: study/models.py:407
+msgid "contry"
+msgstr ""
+
+#: study/models.py:408
+msgid "countries"
+msgstr ""
+
+#: study/models.py:420 study/models.py:479 study/models.py:585
+msgid "city"
+msgstr ""
+
+#: study/models.py:421
+msgid "cities"
+msgstr ""
+
+#: study/models.py:430 study/models.py:441
+msgid "Head of department"
+msgstr ""
+
+#: study/models.py:431 study/models.py:442
+msgid "Candidate of Medical Sciences"
+msgstr ""
+
+#: study/models.py:432 study/models.py:443
+msgid "Candidate of Biological Sciences"
+msgstr ""
+
+#: study/models.py:433 study/models.py:444
+msgid "Candidate of Philosophical Sciences"
+msgstr ""
+
+#: study/models.py:434 study/models.py:445
+msgid "Doctor of Medicine (M.D.)"
+msgstr ""
+
+#: study/models.py:435 study/models.py:446
+msgid "Doctor of Biological Sciences"
+msgstr ""
+
+#: study/models.py:436 study/models.py:447
+msgid "Doctor of Philosophy (PhD)"
+msgstr ""
+
+#: study/models.py:437 study/models.py:448
+msgid "Professor"
+msgstr ""
+
+#: study/models.py:438 study/models.py:449
+msgid "Academician"
+msgstr ""
+
+#: study/models.py:439 study/models.py:450
+msgid "PhD (Doctor of Pharmacy)"
+msgstr ""
+
+#: study/models.py:452
+msgid "position"
+msgstr ""
+
+#: study/models.py:456 study/models.py:586
+msgid "principal investigator"
+msgstr ""
+
+#: study/models.py:457
+msgid "principal investigators"
+msgstr ""
+
+#: study/models.py:469 study/models.py:470
+msgid "head of department"
+msgstr ""
+
+#: study/models.py:478
+msgid "index"
+msgstr ""
+
+#: study/models.py:480 study/models.py:483
+msgid "City"
+msgstr ""
+
+#: study/models.py:481 study/models.py:484
+msgid "Village"
+msgstr ""
+
+#: study/models.py:486
+msgid "inhabited locality"
+msgstr ""
+
+#: study/models.py:487 study/models.py:493
+msgid "Street"
+msgstr ""
+
+#: study/models.py:488 study/models.py:494
+msgid "Square"
+msgstr ""
+
+#: study/models.py:489 study/models.py:495
+msgid "Boulevard"
+msgstr ""
+
+#: study/models.py:490 study/models.py:496
+msgid "Lane"
+msgstr ""
+
+#: study/models.py:491 study/models.py:497
+msgid "Avenue"
+msgstr ""
+
+#: study/models.py:499
+msgid "street type"
+msgstr ""
+
+#: study/models.py:500
+msgid "street name"
+msgstr ""
+
+#: study/models.py:501
+msgid "building number"
+msgstr ""
+
+#: study/models.py:504
+msgid "place address"
+msgstr ""
+
+#: study/models.py:505
+msgid "place addresses"
+msgstr ""
+
+#: study/models.py:514
+msgid "information desk"
+msgstr ""
+
+#: study/models.py:515
+msgid "registration desk"
+msgstr ""
+
+#: study/models.py:516
+msgid "reception ward"
+msgstr ""
+
+#: study/models.py:517
+msgid "phone number"
+msgstr ""
+
+#: study/models.py:521
+msgid "medical institution phone number"
+msgstr ""
+
+#: study/models.py:522
+msgid "medical institution phone numbers"
+msgstr ""
+
+#: study/models.py:530 study/models.py:557
+msgid "Autonomous Republic of Crimea"
+msgstr ""
+
+#: study/models.py:531 study/models.py:558
+msgid "Cherkaska"
+msgstr ""
+
+#: study/models.py:532 study/models.py:559
+msgid "Chernihivska"
+msgstr ""
+
+#: study/models.py:533 study/models.py:560
+msgid "Chernivetska"
+msgstr ""
+
+#: study/models.py:534 study/models.py:561
+msgid "Dnipropetrovska"
+msgstr ""
+
+#: study/models.py:535 study/models.py:562
+msgid "Donetska"
+msgstr ""
+
+#: study/models.py:536 study/models.py:563
+msgid "Ivano-Frankivska"
+msgstr ""
+
+#: study/models.py:537 study/models.py:564
+msgid "Kharkivska"
+msgstr ""
+
+#: study/models.py:538 study/models.py:565
+msgid "Khersonska"
+msgstr ""
+
+#: study/models.py:539 study/models.py:566
+msgid "Khmelnytska"
+msgstr ""
+
+#: study/models.py:540 study/models.py:567
+msgid "Kirovohradska"
+msgstr ""
+
+#: study/models.py:541 study/models.py:568
+msgid "Kyiv"
+msgstr ""
+
+#: study/models.py:542 study/models.py:569
+msgid "Kyivska"
+msgstr ""
+
+#: study/models.py:543 study/models.py:570
+msgid "Luhanska"
+msgstr ""
+
+#: study/models.py:544 study/models.py:571
+msgid "Lvivska"
+msgstr ""
+
+#: study/models.py:545 study/models.py:572
+msgid "Mykolayivska"
+msgstr ""
+
+#: study/models.py:546 study/models.py:573
+msgid "Odeska"
+msgstr ""
+
+#: study/models.py:547 study/models.py:574
+msgid "Poltavska"
+msgstr ""
+
+#: study/models.py:548 study/models.py:575
+msgid "Rivnenska"
+msgstr ""
+
+#: study/models.py:549 study/models.py:576
+msgid "Sumska"
+msgstr ""
+
+#: study/models.py:550 study/models.py:577
+msgid "Ternopilska"
+msgstr ""
+
+#: study/models.py:551 study/models.py:578
+msgid "Vinnytska"
+msgstr ""
+
+#: study/models.py:552 study/models.py:579
+msgid "Volynska"
+msgstr ""
+
+#: study/models.py:553 study/models.py:580
+msgid "Zakarpatska"
+msgstr ""
+
+#: study/models.py:554 study/models.py:581
+msgid "Zaporizka"
+msgstr ""
+
+#: study/models.py:555 study/models.py:582
+msgid "Zhytomyrska"
+msgstr ""
+
+#: study/models.py:584
+msgid "region"
+msgstr ""
+
+#: study/models.py:587
+msgid "principal investigator phone number"
+msgstr ""
+
+#: study/models.py:588
+msgid "medical institution"
+msgstr ""
+
+#: study/models.py:589
+msgid "medical institution department"
+msgstr ""
+
+#: study/models.py:591
+msgid "site"
+msgstr ""
+
+#: study/models.py:594
+msgid "medical institution department phone number"
+msgstr ""
+
+#: study/models.py:595
+msgid "medical institution department fax"
+msgstr ""
+
+#: study/models.py:596
+msgid "medical educational institution"
+msgstr ""
+
+#: study/models.py:597
+msgid "medical educational institution department"
+msgstr ""
+
+#: study/models.py:598
+msgid "medical institution contact person name"
+msgstr ""
+
+#: study/models.py:599
+msgid "company contact person name"
+msgstr ""
+
+#: study/models.py:600
+msgid "conact person phone number"
+msgstr ""
+
+#: study/models.py:601
+msgid "conact person fax"
+msgstr ""
+
+#: study/models.py:602
+msgid "conact person email"
+msgstr ""
+
+#: study/models.py:605
+msgid "Not recriuting"
+msgstr ""
+
+#: study/models.py:611
+msgid "recruiting status clinicaltrials"
+msgstr ""
+
+#: study/models.py:613
+msgid "recruiting status MOH of Ukraine"
+msgstr ""
+
+#: study/models.py:615
+msgid "recruiting status company"
+msgstr ""
+
+#: study/models.py:619
+msgid "place"
+msgstr ""
+
+#: study/models.py:620
+msgid "places"
+msgstr ""
