@@ -2,39 +2,39 @@
 {% load staticfiles %}
 {% block head_title %}Welcome!{% endblock %}
 {% block content %}
-{% include 'includes/main_navbar.html'%}
-    <div class="container">
-      <!-- Jumbotron -->
-      <div class="jumbotron">
-        <h1>Marketing stuff!</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Get started today</a></p>
-      </div>
-
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-lg-4">
-          <h2>Safari bug warning!</h2>
-          <p class="text-danger">As of v8.0, Safari exhibits a bug in which resizing your browser horizontally causes rendering errors in the justified nav that are cleared upon refreshing.</p>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+    <div class="container" style="margin-top: 50px;">
+      <div class="row" style="padding-right: 15px;">
+        <div class="col-md-6">
+          <form class="navbar-form navbar-left">
+            <input type="text" placeholder="Email" class="form-control">
+            <input type="password" placeholder="Password" class="form-control">
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </form>
         </div>
-        <div class="col-lg-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-lg-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+        <div class="col-md-6">
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+            <button type="button" class="btn btn-info" aria-label="Left Align">
+              <span class="glyphicon glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+          </form>
         </div>
       </div>
-
-      <!-- Site footer -->
-      <footer class="footer">
-        <p>&copy; 2016</p>
-      </footer>
-
-    </div> <!-- /container -->
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron" style="background-color: #ffc35c;">
+        <div class="row">
+          <div class="col-md-6">
+            <h1 style="text-align: center;">Clinicaltrials</h1>
+          </div>
+          <div class="col-md-6">
+            <button type="button" class="btn btn-primary btn-lg btn-block">Study</button>
+            <button type="button" class="btn btn-primary btn-lg btn-block">General information</button>
+          </div>
+        </div>
+        <br>
+        <br>
+        <p>This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
+      </div>
+    </div>
+    <!-- /container -->
 {% endblock %}
