@@ -2,57 +2,109 @@
 {% load staticfiles %}
 {% block head_title %}Welcome!{% endblock %}
 {% block content %}
-  {% include 'includes/main_navbar.html'%}
-    <div class="container" style="background-color: white;">
-      <h3 class="text-muted">Filter by</h3>
+    <div class="container" style="margin-top: 50px;">
+    {% include 'includes/main_navbar.html'%}
+{#      <div class="row" style="padding-right: 15px;">#}
+{#        <div class="col-md-6">#}
+{#          <form class="navbar-form navbar-left">#}
+{#            <input type="text" placeholder="Email" class="form-control">#}
+{#            <input type="password" placeholder="Password" class="form-control">#}
+{#            <button type="submit" class="btn btn-success">Sign in</button>#}
+{#          </form>#}
+{#        </div>#}
+{#        <div class="col-md-6">#}
+{#          <form class="navbar-form navbar-right">#}
+{#            <input type="text" class="form-control" placeholder="Search...">#}
+{#            <button type="button" class="btn btn-info" aria-label="Left Align">#}
+{#              <span class="glyphicon glyphicon glyphicon-search" aria-hidden="true"></span>#}
+{#            </button>#}
+{#          </form>#}
+{#        </div>#}
+{#      </div>#}
+      <!-- Main component for a primary marketing message or call to action -->
+{#      <div class="jumbotron" style="background-color: #ffc35c;">#}
+{#        <div class="row">#}
+{#          <div class="col-md-6">#}
+{#            <h1 style="text-align: center;">Clinicaltrials</h1>#}
+{#          </div>#}
+{#          <div class="col-md-6">#}
+{#            <a href="{% url 'study:study' %}"><button type="button" class="btn btn-primary btn-lg btn-block">Study</button></a>#}
+{#            <br>#}
+{#            <a href="{% url 'index' %}"><button type="button" class="btn btn-primary btn-lg btn-block">General information</button></a>#}
+{#          </div>#}
+{#        </div>#}
+{#      </div>#}
+      <div class="jumbotron" style="background-color: #ffdf7e;">
         <div class="row">
-          <div class="col-xs-3">
-            <select class="form-control">
-                {%for condition in conditions %}
-                    <option value="light">{{ condition.name }}</option>
-                {% endfor %}
-            </select>
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <h2>Що таке клінічне дослідження?</h2>
+            <p>Клінічне дослідження - наукове дослідження за участю людей, що прово-диться для оцінки
+                ефективності та безпечності лікарського препарату. Кліні-чне дослідження це єдиний спосіб
+                довести ефективність і безпеку будь-якого нового препарату. Усі клінічні дослідження
+                проводяться з дотриманням спе-ціальних міжнародних правил належної клінічної практики
+                (Good Clinical Practice - GCP). Дотримання цих правил є гарантією для суспільства того,
+                що права і безпека пацієнтів, що беруть участь в дослідженні, захищені, а ре-зультати
+                дослідження - достовірні.
+            </p>
           </div>
-          <div class="col-xs-3">
-            <select class="form-control">
-                {%for t_area in therapeutic_areas %}
-                    <option value="light">{{ t_area.name }}</option>
-                {% endfor %}
-            </select>
-          </div>
-          <div class="col-xs-3">
-            <select class="form-control">...</select>
-          </div>
-          <div class="col-xs-3">
-            <select class="form-control">...</select>
-          </div>
+          <div class="col-md-1"></div>
         </div>
-        <hr>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>№</th>
-            <th>Код клінічного дослідження</th>
-            <th>Ідентифікатор ClinicalTrials.com.ua</th>
-            <th>Спонсор</th>
-            <th>Статус</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for study in study_descriptions %}
-          <tr>
-            <td style="text-align: center;">{{ forloop.counter}}</td>
-            <td style="text-align: center;">{{ study.sponsor_protocol_number }}</td>
-            <td style="text-align: center;">{{ study.clinical_trials_com_ua_identifier }}</td>
-          {% endfor %}
-              {% for sponsor in sponsors %}
-              <td style="text-align: center;">{{ sponsor.name }}</td>
-              {% endfor %}
-          {% for study in study_descriptions %}
-            <td style="text-align: center;">{{ study.conduct_company_in_ukraine }}</td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </div>
+      </div>
+    <!-- /container -->
+{#{% endblock %}#}
+
+    {#  {% include 'includes/main_navbar.html'%}#}
+{#    <div class="container" style="background-color: white;">#}
+{#      <h3 class="text-muted">Filter by</h3>#}
+{#        <div class="row">#}
+{#          <div class="col-xs-3">#}
+{#            <select class="form-control">#}
+{#                {%for condition in conditions %}#}
+{#                    <option value="light">{{ condition.name }}</option>#}
+{#                {% endfor %}#}
+{#            </select>#}
+{#          </div>#}
+{#          <div class="col-xs-3">#}
+{#            <select class="form-control">#}
+{#                {%for t_area in therapeutic_areas %}#}
+{#                    <option value="light">{{ t_area.name }}</option>#}
+{#                {% endfor %}#}
+{#            </select>#}
+{#          </div>#}
+{#          <div class="col-xs-3">#}
+{#            <select class="form-control">...</select>#}
+{#          </div>#}
+{#          <div class="col-xs-3">#}
+{#            <select class="form-control">...</select>#}
+{#          </div>#}
+{#        </div>#}
+{#        <hr>#}
+{#      <table class="table table-striped">#}
+{#        <thead>#}
+{#          <tr>#}
+{#            <th>№</th>#}
+{#            <th>Код клінічного дослідження</th>#}
+{#            <th>Ідентифікатор ClinicalTrials.com.ua</th>#}
+{#            <th>Спонсор</th>#}
+{#            <th>Статус</th>#}
+{#          </tr>#}
+{#        </thead>#}
+{#        <tbody>#}
+{#          {% for study in study_descriptions %}#}
+{#          <tr>#}
+{#            <td style="text-align: center;">{{ forloop.counter}}</td>#}
+{#            <td style="text-align: center;">{{ study.sponsor_protocol_number }}</td>#}
+{#            <td style="text-align: center;">{{ study.clinical_trials_com_ua_identifier }}</td>#}
+{#          {% endfor %}#}
+{#              {% for sponsor in sponsors %}#}
+{#              <td style="text-align: center;">{{ sponsor.name }}</td>#}
+{#              {% endfor %}#}
+{#          {% for study in study_descriptions %}#}
+{#            <td style="text-align: center;">{{ study.conduct_company_in_ukraine }}</td>#}
+{#          </tr>#}
+{#          {% endfor %}#}
+{#        </tbody>#}
+{#      </table>#}
+{#    </div>#}
 {% endblock %}

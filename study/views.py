@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 # Create your views here.
 
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Condition, TherapeuticArea, StudyIdentifiers, Sponsor
 
 
@@ -14,3 +14,11 @@ def study(request):
                                                      'therapeutic_areas': therapeutic_area,
                                                      'study_descriptions': study_description,
                                                      'sponsors': sponsor})
+
+
+def study_details(request):
+    #     studies = get_object_or_404(StudyIdentifiers, id=study_id)
+    #     # food_detail = get_object_or_404(Food, id=food_id)
+    #     return render(request, 'study/study_details.html',
+    #                   {'studies': studies})
+    return render(request, 'study/study_details.html')
