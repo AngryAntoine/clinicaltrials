@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block head_title %}Welcome!{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-10">
+              <h2 style="text-align: center; text-decoration: underline;">Ідентифікатор клінічного дослідження</h2>
+                <br>
+              {% include 'includes/navtabs.html'%}
+              <table class="table table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Константа</th>
+                    <th>Відповідь</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Область</td>
+                    <td>Дніпропетровська</td>
+                  </tr>
+                  <tr>
+                    <td>Місто</td>
+                    <td>Дніпро</td>
+                  </tr>
+                  <tr>
+                    <td>П.І.Б. відповідального дослідника</td>
+                    <td>Остап Сулейман Берта-Мария Бендер Бей</td>
+                  </tr>
+                  <tr>
+                    <td>Медичний заклад</td>
+                    <td>Комунальний заклад "Дніпропетровська міська багатопрофільна клінічна лікарня № 4 "Дніпропетровської обласної ради</td>
+                  </tr>
+                  <tr>
+                    <td>Відділення медичного закладу</td>
+                    <td>Гематологічний центр (Відділення гематології)</td>
+                  </tr>
+                  <tr>
+                    <td>Адреса</td>
+                    <td>49102, м. Дніпропетровськ, вул.Ближня, 31</td>
+                  </tr>
+                  <tr>
+                    <td>Номер телефону медичного закладу</td>
+                    <td>(056) 756-01-09</td>
+                  </tr>
+                  <tr>
+                    <td>Номер телефону відділення медичного закладу</td>
+                    <td>(056) 756-02-44</td>
+                  </tr>
+                  <tr>
+                    <td>Веб-сайт</td>
+                    <td>http://bolnica.com.ua/</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-xs-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-10">
+                <a href="{% url 'study:study' %}"><h5>До списку досліджень</h5></a>
+            </div>
+            <div class="col-xs-1"></div>
+        </div>
+    </div>
+{% endblock %}

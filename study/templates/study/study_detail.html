@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block head_title %}Welcome!{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-10">
+              <h2 style="text-align: center; text-decoration: underline;">Ідентифікатор клінічного дослідження</h2>
+                <br>
+              {% include 'includes/navtabs.html'%}
+            </div>
+            <div class="col-xs-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-10">
+        <a href="{% url 'study:study' %}"><h3>До списку досліджень</h3></a>
+            </div>
+            <div class="col-xs-1"></div>
+        </div>
+    </div>
+{% endblock %}

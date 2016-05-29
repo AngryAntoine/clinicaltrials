@@ -2,8 +2,9 @@
 {% load staticfiles %}
 {% block head_title %}Welcome!{% endblock %}
 {% block content %}
-    <div class="container" style="margin-top: 50px;">
+    <div class="container">
     {% include 'includes/main_navbar.html'%}
+
 {#      <div class="row" style="padding-right: 15px;">#}
 {#        <div class="col-md-6">#}
 {#          <form class="navbar-form navbar-left">#}
@@ -36,75 +37,94 @@
 {#      </div>#}
       <div class="jumbotron" style="background-color: #ffdf7e;">
         <div class="row">
-          <div class="col-md-1"></div>
-          <div class="col-md-10">
-            <h2>Що таке клінічне дослідження?</h2>
-            <p>Клінічне дослідження - наукове дослідження за участю людей, що прово-диться для оцінки
-                ефективності та безпечності лікарського препарату. Кліні-чне дослідження це єдиний спосіб
-                довести ефективність і безпеку будь-якого нового препарату. Усі клінічні дослідження
-                проводяться з дотриманням спе-ціальних міжнародних правил належної клінічної практики
-                (Good Clinical Practice - GCP). Дотримання цих правил є гарантією для суспільства того,
-                що права і безпека пацієнтів, що беруть участь в дослідженні, захищені, а ре-зультати
-                дослідження - достовірні.
-            </p>
+          <div class="col-md-12">
+            <h3 class="text-muted">Фільтри:</h3>
           </div>
-          <div class="col-md-1"></div>
-        </div>
-      </div>
-    <!-- /container -->
-{#{% endblock %}#}
-
-    {#  {% include 'includes/main_navbar.html'%}#}
-{#    <div class="container" style="background-color: white;">#}
-{#      <h3 class="text-muted">Filter by</h3>#}
-{#        <div class="row">#}
-{#          <div class="col-xs-3">#}
-{#            <select class="form-control">#}
+          <div class="row">
+            <div class="col-xs-3">
+              <select class="form-control">
+                  <option value="Розділ медицини">Розділ медицини</option>
+                  <option value="Андрологія">Гематологія</option>
 {#                {%for condition in conditions %}#}
 {#                    <option value="light">{{ condition.name }}</option>#}
 {#                {% endfor %}#}
-{#            </select>#}
-{#          </div>#}
-{#          <div class="col-xs-3">#}
-{#            <select class="form-control">#}
+            </select>
+          </div>
+          <div class="col-xs-3">
+            <select class="form-control">
+              <option selected value="Назва захворювання">Назва захворювання</option>
+              <option value="Поліцитемія Вера">Справжня поліцитемія</option>
 {#                {%for t_area in therapeutic_areas %}#}
 {#                    <option value="light">{{ t_area.name }}</option>#}
 {#                {% endfor %}#}
-{#            </select>#}
-{#          </div>#}
-{#          <div class="col-xs-3">#}
-{#            <select class="form-control">...</select>#}
-{#          </div>#}
-{#          <div class="col-xs-3">#}
-{#            <select class="form-control">...</select>#}
-{#          </div>#}
-{#        </div>#}
-{#        <hr>#}
-{#      <table class="table table-striped">#}
-{#        <thead>#}
-{#          <tr>#}
-{#            <th>№</th>#}
-{#            <th>Код клінічного дослідження</th>#}
-{#            <th>Ідентифікатор ClinicalTrials.com.ua</th>#}
-{#            <th>Спонсор</th>#}
-{#            <th>Статус</th>#}
-{#          </tr>#}
-{#        </thead>#}
-{#        <tbody>#}
+            </select>
+          </div>
+          <div class="col-xs-3">
+            <select class="form-control">
+              <option selected value="Статус дослідження">Статус дослідження</option>
+              <option value="Набір відкрито">Набір відкрито</option>
+              <option value="Набір завершено">Набір завершено</option>
+            </select>
+          </div>
+          <div class="col-xs-3">
+            <select class="form-control">
+              <option selected value="Місто">Місто</option>
+              <option value="Дніпро">Дніпро</option>
+                <option value="Київ">Київ</option>
+            </select>
+          </div>
+        </div>
+        <hr>
+      <table class="table table-striped" style="border: 1px solid #399;">
+        <thead>
+          <tr>
+            <th style="vertical-align: middle; text-align: center; border: 1px solid #399;">№</th>
+            <th style="vertical-align: middle; text-align: center; border: 1px solid #399;">Назва захворювання</th>
+            <th style="vertical-align: middle; text-align: center; border: 1px solid #399;">Розділ медицини</th>
+            <th style="vertical-align: middle; text-align: center; border: 1px solid #399;">Статус клінічного дослідження</th>
+            <th style="vertical-align: middle; text-align: center; border: 1px solid #399;">Код клінічного дослідження (надається спонсором)</th>
+            <th style="vertical-align: middle; text-align: center; border: 1px solid #399;">Фаза</th>
+            <th style="vertical-align: middle; text-align: center; border: 1px solid #399;">Перелік міст</th>
+          </tr>
+        </thead>
+         <tbody>
+            <tr style="background-color: #ffdf7e;">
+                <td style="vertical-align: middle; text-align: center; border: 1px solid #399;">
+                    <a href="{% url 'study:basic_information' %}">1</a>
+                </td>
+                <td style="vertical-align: middle; text-align: center; border: 1px solid #399;">
+                    <a href="{% url 'study:basic_information' %}">Справжня поліцитемія</a>
+                </td>
+                <td style="vertical-align: middle; text-align: center; border: 1px solid #399;">
+                    <a href="{% url 'study:basic_information' %}">Гематологія</a></td>
+                <td style="vertical-align: middle; text-align: center; border: 1px solid #399;">
+                    <a href="{% url 'study:basic_information' %}">Набір відкрито</a></td>
+                <td style="vertical-align: middle; text-align: center; border: 1px solid #399;">
+                    <a href="{% url 'study:basic_information' %}">PEN-PV</a></td>
+                <td style="vertical-align: middle; text-align: center; border: 1px solid #399;">
+                    <a href="{% url 'study:basic_information' %}">III</a></td>
+                <td style="vertical-align: middle; text-align: center; border: 1px solid #399;">
+                    <a href="{% url 'study:basic_information' %}">Дніпро</a></td>
+            </tr>
 {#          {% for study in study_descriptions %}#}
 {#          <tr>#}
 {#            <td style="text-align: center;">{{ forloop.counter}}</td>#}
 {#            <td style="text-align: center;">{{ study.sponsor_protocol_number }}</td>#}
 {#            <td style="text-align: center;">{{ study.clinical_trials_com_ua_identifier }}</td>#}
 {#          {% endfor %}#}
-{#              {% for sponsor in sponsors %}#}
-{#              <td style="text-align: center;">{{ sponsor.name }}</td>#}
-{#              {% endfor %}#}
+{#          {% for sponsor in sponsors %}#}
+{#            <td style="text-align: center;">{{ sponsor.name }}</td>#}
+{#          {% endfor %}#}
 {#          {% for study in study_descriptions %}#}
 {#            <td style="text-align: center;">{{ study.conduct_company_in_ukraine }}</td>#}
 {#          </tr>#}
 {#          {% endfor %}#}
-{#        </tbody>#}
-{#      </table>#}
-{#    </div>#}
+        </tbody>
+      </table>
+    </div>
+          </div>
+        </div>
+{#      </div>#}
+{#      </div>#}
+    <!-- /container -->
 {% endblock %}

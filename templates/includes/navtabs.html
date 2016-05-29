@@ -1,0 +1,6 @@
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" {%  if '/basic_information' in request.path %}class="active"{% endif %}><a href="{% url 'study:basic_information' %}">Базова інформація</a></li>
+  <li role="presentation" {%  if '/eligibility' in request.path %}class="active"{% endif %}><a href="{% url 'study:eligibility' %}">Критерії відбору</a></li>
+  <li role="presentation" {%  if '/place' in request.path %}class="active"{% endif %}><a href="{% url 'study:place' %}">Місце проведення</a></li>
+  <li role="presentation" {%  if '/contacts' in request.path %}class="active"{% endif %}><a href="{% url 'study:contacts' %}">Контакти</a></li>
+</ul>

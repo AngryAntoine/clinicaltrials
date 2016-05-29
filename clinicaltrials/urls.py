@@ -20,7 +20,7 @@ from django.conf.urls.i18n import i18n_patterns
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
+    url(r'^$', views.about_clinical_research, name='home'),
     url(r'^study/', include('study.urls', namespace='study')),
 ]
 

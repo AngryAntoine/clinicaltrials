@@ -21,4 +21,36 @@ def study_details(request):
     #     # food_detail = get_object_or_404(Food, id=food_id)
     #     return render(request, 'study/study_details.html',
     #                   {'studies': studies})
-    return render(request, 'study/study_details.html')
+    return render(request, 'study/study_detail.html')
+
+
+def basic_information(request):
+    #     studies = get_object_or_404(StudyIdentifiers, id=study_id)
+    #     # food_detail = get_object_or_404(Food, id=food_id)
+    #     return render(request, 'study/study_details.html',
+    #                   {'studies': studies})
+    return render(request, 'study/basic_information.html')
+
+
+def eligibility(request):
+    #     studies = get_object_or_404(StudyIdentifiers, id=study_id)
+    #     # food_detail = get_object_or_404(Food, id=food_id)
+    #     return render(request, 'study/study_details.html',
+    #                   {'studies': studies})
+    return render(request, 'study/eligibility.html')
+
+
+def contacts(request):
+    #     studies = get_object_or_404(StudyIdentifiers, id=study_id)
+    #     # food_detail = get_object_or_404(Food, id=food_id)
+    #     return render(request, 'study/study_details.html',
+    #                   {'studies': studies})
+    return render(request, 'study/contacts.html')
+
+
+def place(request):
+    #     studies = get_object_or_404(StudyIdentifiers, id=study_id)
+    #     food_detail = get_object_or_404(Food, id=food_id)
+    #     return render(request, 'study/study_details.html',
+    #                   {'studies': studies})
+    return render(request, 'study/place.html')
