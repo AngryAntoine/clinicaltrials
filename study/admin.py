@@ -48,10 +48,10 @@ class DeceaseAdmin(admin.ModelAdmin):
 admin.site.register(Disease, DeceaseAdmin)
 
 
-class MaterialsAdmin(admin.ModelAdmin):
+class AllStudyRelatedMaterialsAdmin(admin.ModelAdmin):
     pass
 
-admin.site.register(Materials, MaterialsAdmin)
+admin.site.register(AllStudyRelatedMaterials, AllStudyRelatedMaterialsAdmin)
 
 
 class InvestigationalProductsAdmin(admin.ModelAdmin):
@@ -126,10 +126,10 @@ class PlaceAddressAdmin(admin.ModelAdmin):
 admin.site.register(PlaceAddress, PlaceAddressAdmin)
 
 
-class PlaceAdmin(admin.ModelAdmin):
+class ClinicalStudySiteAdmin(admin.ModelAdmin):
     pass
 
-admin.site.register(Place, PlaceAdmin)
+admin.site.register(ClinicalStudySite, ClinicalStudySiteAdmin)
 
 
 class MedicalInstitutionPhoneNumberAdmin(admin.ModelAdmin):
