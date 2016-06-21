@@ -25,7 +25,7 @@ urlpatterns = [
 ]
 
 urlpatterns += i18n_patterns(
-    url(r'^admin_tools/', include('admin_tools.urls')),
+    # url(r'^admin_tools/', include('admin_tools.urls')),
     # url(r'^grappelli/', include('grappelli.urls')),  # grappelli URLS
     url(r'^admin/', admin.site.urls),
 )
