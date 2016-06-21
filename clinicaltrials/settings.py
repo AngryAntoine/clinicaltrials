@@ -34,10 +34,10 @@ DEFAULT_CHARSET = 'utf-8'
 
 INSTALLED_APPS = [
     # 'grappelli',
-    # 'admin_tools',
-    # 'admin_tools.theming',
-    # 'admin_tools.menu',
-    # 'admin_tools.dashboard',
+    'admin_tools',
+    'admin_tools.theming',
+    'admin_tools.menu',
+    'admin_tools.dashboard',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
