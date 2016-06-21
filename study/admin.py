@@ -17,11 +17,11 @@ class ConditionAdmin(admin.ModelAdmin):
 admin.site.register(Condition, ConditionAdmin)
 
 
-class TherapeuticAreaAdmin(admin.ModelAdmin):
-    list_display = ['name']
-    # prepopulated_fields = {"slug": ("name",)}
+# class TherapeuticAreaAdmin(admin.ModelAdmin):
+#     list_display = ['name']
+#     # prepopulated_fields = {"slug": ("name",)}
 
-admin.site.register(TherapeuticArea, TherapeuticAreaAdmin)
+admin.site.register(TherapeuticArea)
 
 
 class GeneralInformationAdmin(admin.ModelAdmin):
@@ -42,22 +42,22 @@ class SponsorAdmin(admin.ModelAdmin):
 admin.site.register(Sponsor, SponsorAdmin)
 
 
-class DeceaseAdmin(admin.ModelAdmin):
-    pass
+class MedicalConditionAdmin(admin.ModelAdmin):
+    search_fields = ['name']
 
-admin.site.register(Disease, DeceaseAdmin)
+admin.site.register(MedicalCondition, MedicalConditionAdmin)
 
 
-class AllStudyRelatedMaterialsAdmin(admin.ModelAdmin):
-    pass
-
-admin.site.register(AllStudyRelatedMaterials, AllStudyRelatedMaterialsAdmin)
+# class AllStudyRelatedMaterialsAdmin(admin.ModelAdmin):
+#     pass
+#
+# admin.site.register(AllStudyRelatedMaterials, AllStudyRelatedMaterialsAdmin)
 
 
 class InvestigationalProductsAdmin(admin.ModelAdmin):
     pass
 
-admin.site.register(InvestigationProducts, InvestigationalProductsAdmin)
+admin.site.register(InvestigationalProducts, InvestigationalProductsAdmin)
 
 
 class ComparatorsAdmin(admin.ModelAdmin):
@@ -85,7 +85,8 @@ admin.site.register(ExclusionCriteria, ExclusionCriteriaAdmin)
 
 
 class EligibilityAdmin(admin.ModelAdmin):
-    pass
+    search_fields = ['name', 'inclusion_criteria']
+    # pass
 
 admin.site.register(Eligibility, EligibilityAdmin)
 
@@ -136,3 +137,8 @@ class MedicalInstitutionPhoneNumberAdmin(admin.ModelAdmin):
     pass
 
 admin.site.register(MedicalInstitutionPhoneNumber, MedicalInstitutionPhoneNumberAdmin)
+
+class StudyAdmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(Study, StudyAdmin)

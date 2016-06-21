@@ -16,6 +16,14 @@ def study(request):
                                                      'sponsors': sponsor})
 
 
+def study_identifiers(request):
+    #     studies = get_object_or_404(StudyIdentifiers, id=study_id)
+    #     # food_detail = get_object_or_404(Food, id=food_id)
+    #     return render(request, 'study/study_details.html',
+    #                   {'studies': studies})
+    return render(request, 'study/study_identifiers.html')
+
+
 def study_details(request):
     #     studies = get_object_or_404(StudyIdentifiers, id=study_id)
     #     # food_detail = get_object_or_404(Food, id=food_id)

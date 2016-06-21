@@ -10,6 +10,7 @@ from django.utils.translation import ugettext_lazy as _
 class Condition(models.Model):
     name = models.CharField(_('condition name'), max_length=100, null=True, blank=True)
     description = models.TextField(_('description'), max_length=4096, null=True, blank=True)
+    description_ukr = models.TextField(_('description ukrainian'), max_length=4096, null=True, blank=True)
 
     # slug = models.SlugField(max_length=200, db_index=True, unique=True)
 
@@ -24,7 +25,7 @@ class Condition(models.Model):
 
 @python_2_unicode_compatible
 class TherapeuticArea(models.Model):
-    CHOOSE_CONDITION = _('Choose condition')
+    TRERAPEUTIC_AREA = _('Therapeutic area')
     ANDROLOGY = _('Andrology')
     ASTHMA = _('Asthma & Allergy')
     CARDIOLOGY = _('Cardiology & Vascular Diseases')
@@ -56,7 +57,7 @@ class TherapeuticArea(models.Model):
     UROLOGY = _('Urology')
     VENEROLOGY = _('Venerology')
     THERAPEUTIC_AREA_CHOICES = (
-        (CHOOSE_CONDITION, _('Choose condition')),
+        (TRERAPEUTIC_AREA, _('Therapeutic area')),
         (ANDROLOGY, _('Andrology')),
         (ASTHMA, _('Asthma & Allergy')),
         (CARDIOLOGY, _('Cardiology & Vascular Diseases')),
@@ -89,7 +90,7 @@ class TherapeuticArea(models.Model):
         (VENEROLOGY, _('Venerology')),
     )
     name = models.CharField(_('decease name'), choices=THERAPEUTIC_AREA_CHOICES, max_length=100,
-                            default='CHOOSE_CONDITION', null=True, blank=True)
+                            default='TRERAPEUTIC_AREA', null=True, blank=True)
 
     class Meta:
         verbose_name = _('therapeutic area')
@@ -100,8 +101,9 @@ class TherapeuticArea(models.Model):
 
 
 @python_2_unicode_compatible
-class Disease(models.Model):
-    name = models.CharField(_('disease name'), max_length=100, null=True, blank=True)
+class MedicalCondition(models.Model):
+    name = models.CharField(_('medical condition'), max_length=100, null=True, blank=True)
+    name_ukr = models.CharField(_('medical condition ukrainian'), max_length=100, null=True, blank=True)
     therapeutic_area = models.ForeignKey(TherapeuticArea, verbose_name=_('therapeutic area'), blank=True, null=True)
 
     class Meta:
@@ -115,19 +117,26 @@ class Disease(models.Model):
 
 @python_2_unicode_compatible
 class GeneralInformation(models.Model):
-    name = models.ForeignKey(TherapeuticArea, max_length=100, null=True, blank=True)
+    therapeutic_area = models.ForeignKey(TherapeuticArea, max_length=100, null=True, blank=True,
+                                         verbose_name=_('therapeutic area'))
     # slug = models.SlugField(max_length=200, db_index=True, unique=True)
-    decease_name = models.ForeignKey(Disease, blank=True, null=True, verbose_name=_('decease_name'))
-    protocol_title = models.CharField(_('protocol title'), max_length=200, null=True, blank=True)
+    medical_condition = models.ForeignKey(MedicalCondition, blank=True, null=True,
+                                          verbose_name=_('medical condition'))
+    protocol_title = models.TextField(_('protocol title'), null=True, blank=True)
+    protocol_title_ukr = models.TextField(_('protocol title ukrainian'), null=True, blank=True)
     detail_description = models.TextField(_('detailed description'), null=True, blank=True)
+    detail_description_ukr = models.TextField(_('detailed description ukrainian'), null=True, blank=True)
+    purpose = models.TextField(_('purpose'), null=True, blank=True)
+    purpose_ukr = models.TextField(_('purpose ukrainian'), null=True, blank=True)
     PHASE_I = 'I'
     PHASE_I_II = 'I/II'
     PHASE_I_III = 'I/III'
     PHASE_II = 'II'
     PHASE_II_III = 'II/III'
     PHASE_III = 'III'
-    PHASE_III_IV = 'III/IV'
+    # PHASE_III_IV = 'III/IV'
     PHASE_IV = 'IV'
+    PREREGISTRATION = _('pre-registration')
     PHASE_CHOICES = (
         (PHASE_I, 'I'),
         (PHASE_I_II, 'I/II'),
@@ -135,10 +144,11 @@ class GeneralInformation(models.Model):
         (PHASE_II, 'II'),
         (PHASE_II_III, 'II/III'),
         (PHASE_III, 'III'),
-        (PHASE_III_IV, 'III/IV'),
+        # (PHASE_III_IV, 'III/IV'),
         (PHASE_IV, 'IV'),
+        (PREREGISTRATION, _('pre-registration')),
     )
-    phase = models.CharField(_('phase'), max_length=20, choices=PHASE_CHOICES, null=True, blank=True)
+    phase = models.CharField(_('phase'), max_length=50, choices=PHASE_CHOICES, null=True, blank=True)
     INTERVENTIONAL = _('Interventional')
     NON_INTERVENTIONAL = _('Non-Interventional')
     STUDY_TYPE_CHOICES = (
@@ -160,10 +170,40 @@ class GeneralInformation(models.Model):
     )
     study_design = models.CharField(_('study design'), max_length=50, choices=STUDY_DESIGN_CHOICES, null=True,
                                     blank=True)
-    purpose = models.CharField(_('purpose'), max_length=10000, null=True, blank=True)
+    trial_sites_quantity = models.IntegerField(_('quantity of trial sites'), null=True, blank=True)
+    RANDOMIZED = _('randomized')
+    CONTROLLED = _('controlled')
+    OPEN = _('opened')
+    SIMPLE_BLIND = _('simple blind')
+    DOUBLE_BLIND = _('double blind')
+    PARALLEL = _('with parallel groups')
+    CROSSED = _('crossed')
+    COMPARATIVE = _('comparative')
+    CLINICAL_STUDY_CHOICES = (
+        (RANDOMIZED, _('randomized')),
+        (CONTROLLED, _('controlled')),
+        (OPEN, _('opened')),
+        (SIMPLE_BLIND, _('simple blind')),
+        (DOUBLE_BLIND, _('double blind')),
+        (PARALLEL, _('with parallel groups')),
+        (CROSSED, _('crossed')),
+        (COMPARATIVE, _('comparative')),
+    )
+    clinical_study = models.CharField(_('clinical study'), max_length=50, choices=CLINICAL_STUDY_CHOICES,
+                                      null=True, blank=True)
+    ONLY_UKRAINE = _('only in ukraine')
+    IN_COUNTRIES = _('in countries (International)')
+    CLINICAL_STUDY_CONDUCTION_CHOICES = (
+        (ONLY_UKRAINE, _('only in ukraine')),
+        (IN_COUNTRIES, _('in countries (International)')),
+    )
+    clinical_study_conducted = models.CharField(_('clinical study is conducted'), max_length=50,
+                                                choices=CLINICAL_STUDY_CONDUCTION_CHOICES, null=True, blank=True)
+    clinical_study_conduction_countries = models.CharField(_('Countries in which clinical study is conducted'),
+                                                           max_length=250, null=True, blank=True)
 
     class Meta:
-        ordering = ('name',)
+        ordering = ('therapeutic_area',)
         verbose_name = 'general information'
         verbose_name_plural = 'general information'
 
@@ -174,7 +214,9 @@ class GeneralInformation(models.Model):
 @python_2_unicode_compatible
 class Sponsor(models.Model):
     name = models.CharField(_('sponsor name'), max_length=100, null=True, blank=True)
+    name_ukr = models.CharField(_('sponsor name ukrainian'), max_length=100, null=True, blank=True)
     address = models.CharField(_('address'), max_length=100, null=True, blank=True)
+    address_ukr = models.CharField(_('address ukrainian'), max_length=100, null=True, blank=True)
     phone = models.IntegerField(_('phone'), null=True, blank=True)
     email = models.CharField(_('email'), max_length=100, null=True, blank=True)
     link = models.CharField(_('link'), max_length=100, null=True, blank=True)
@@ -186,7 +228,9 @@ class Sponsor(models.Model):
 @python_2_unicode_compatible
 class Company(models.Model):
     name = models.CharField(_('company name'), max_length=100, null=True, blank=True)
+    name_ukr = models.CharField(_('sponsor name ukrainian'), max_length=100, null=True, blank=True)
     address = models.CharField(_('address'), max_length=100, null=True, blank=True)
+    address_ukr = models.CharField(_('address ukrainian'), max_length=100, null=True, blank=True)
     phone = models.IntegerField(_('phone'), null=True, blank=True)
     email = models.CharField(_('email'), max_length=100, null=True, blank=True)
     link = models.CharField(_('link'), max_length=100, null=True, blank=True)
@@ -201,6 +245,75 @@ class Company(models.Model):
 
 
 @python_2_unicode_compatible
+class InvestigationalProducts(models.Model):
+    form = models.TextField(_('form'), null=True, blank=True)
+    doze = models.TextField(_('doze'), null=True, blank=True)
+    manufacturer = models.TextField(_('manufacturer'), null=True, blank=True)
+    manufacturer_ukr = models.TextField(_('manufacturer ukrainian'), null=True, blank=True)
+    country = models.CharField(_('country'), max_length=100, null=True, blank=True)
+    country_ukr = models.CharField(_('country ukrainian'), max_length=100, null=True, blank=True)
+
+    class Meta:
+        verbose_name = 'investigation product'
+        verbose_name_plural = 'investigation products'
+
+    def __str__(self):
+        return '{}, {}'.format(self.form, self.manufacturer)
+
+
+@python_2_unicode_compatible
+class Comparators(models.Model):
+    form = models.TextField(_('form'), null=True, blank=True)
+    doze = models.TextField(_('doze'), blank=True, null=True)
+    manufacturer = models.TextField(_('manufacturer'), null=True, blank=True)
+    manufacturer_ukr = models.TextField(_('manufacturer ukrainian'), null=True, blank=True)
+    country = models.CharField(_('country'), max_length=100, null=True, blank=True)
+    country_ukr = models.CharField(_('country ukrainian'), max_length=100, null=True, blank=True)
+
+    class Meta:
+        verbose_name = _('comparator')
+        verbose_name_plural = _('comparators')
+
+    def __str__(self):
+        return '{}, {}'.format(self.form, self.manufacturer)
+
+
+@python_2_unicode_compatible
+class StudyRelatedMaterials(models.Model):
+    name = models.TextField(_('name'), null=True, blank=True)
+    name_ukrainian = models.TextField(_('name ukrainian'), null=True, blank=True)
+    manufacturer = models.TextField(_('manufacturer'), null=True, blank=True)
+    manufacturer_ukr = models.TextField(_('manufacturer ukrainian'), null=True, blank=True)
+    country = models.CharField(_('country'), max_length=100, null=True, blank=True)
+    country_ukr = models.CharField(_('country ukrainian'), max_length=100, null=True, blank=True)
+
+    class Meta:
+        ordering = ('name',)
+        verbose_name = _('study related material')
+        verbose_name_plural = _('study related materials')
+
+    def __str__(self):
+        return self.name
+
+
+# @python_2_unicode_compatible
+# class AllStudyRelatedMaterials(models.Model):
+#     name = models.CharField(_('name'), max_length=100, null=True, blank=True)
+#     investigation_products = models.ForeignKey(InvestigationProducts, verbose_name=_('investigation_products'),
+#                                                null=True, blank=True)
+#     comparators = models.ForeignKey(Comparators, verbose_name=_('comparators'), null=True, blank=True)
+#     study_related_materials = models.ForeignKey(StudyRelatedMaterials, verbose_name=_('study related materials'),
+#                                                 null=True, blank=True)
+#
+#     class Meta:
+#         ordering = ('name',)
+#         verbose_name = _('all study-related materials')
+#         verbose_name_plural = _('all study-related materials')
+#
+#     def __str__(self):
+#         return self.name
+
+@python_2_unicode_compatible
 class StudyIdentifiers(models.Model):
     # study_condition = models.ForeignKey(Condition, verbose_name=_('study condition'))
     # therapeutic_area = models.ForeignKey(TherapeuticArea, verbose_name=_('therapeutic area'))
@@ -210,34 +323,40 @@ class StudyIdentifiers(models.Model):
     clinical_trials_gov_identifier = models.CharField(_('ClinicalTrials.gov Identifier'), max_length=100, blank=True,
                                                       null=True)
     clinical_trials_gov_link = models.CharField(_('ClinicalTrials.gov link'), max_length=200, blank=True, null=True)
+    # d = datetime.date.year
     eudract = models.CharField(_('EudraCT number'), max_length=100, blank=True, null=True)
+    eudract_ukr = models.CharField(_('EudraCT number ukrainian'), max_length=100, blank=True, null=True)
     eudract_link = models.CharField(_('EudraCT link'), max_length=200, blank=True, null=True)
     moh_of_ukraine = models.CharField(_('MOH of Ukraine'), max_length=100, blank=True, null=True)
+    moh_of_ukraine_ukr = models.CharField(_('MOH of Ukraine ukrainian'), max_length=100, blank=True, null=True)
     moh_of_ukraine_link = models.CharField(_('MOH of Ukraine link'), max_length=200, blank=True, null=True)
     sponsor_card = models.ForeignKey(Sponsor, verbose_name=_('sponsor, country'), null=True, blank=True)
     company_card = models.ForeignKey(Company, verbose_name=_('Company that controls conducting of clinical '
                                                              'study in Ukraine'), null=True, blank=True)
     estimated_enrollment_clinicaltrials_overall = models.IntegerField(
-        _('Estimated enrollment in general according to clinicaltrials.com'), blank=True, null=True)
+        _('Estimated enrollment in general according to clinicaltrials.gov'), blank=True, null=True)
     estimated_enrollment_moh_ukraine_overall = models.IntegerField(
         _('Estimated enrollment in general according to MOH of Ukraine'), blank=True, null=True)
     estimated_enrollment_company_overall = models.IntegerField(_(
         'Estimated enrollment in general according to \"Company\"'), blank=True, null=True)
     estimated_enrollment_moh_ukraine = models.IntegerField(
         _('Estimated enrollment in Ukraine according to MOH of Ukraine'), blank=True, null=True)
-    estimated_enrollment_company = models.IntegerField(_('Estimated enrollment in Ukraine according to "Company"'),
-                                                       blank=True, null=True)
+    estimated_enrollment_moh_in_ukraine = models.IntegerField(_('Estimated enrollment in Ukraine according to '
+                                                                'MOH of Ukraine'), blank=True, null=True)
+    estimated_enrollment_company_in_ukraine = models.IntegerField(_('Estimated enrollment in Ukraine according '
+                                                                    'to "Company"'), blank=True, null=True)
     enrollment_start_date_ukraine = models.DateTimeField(_('start date of enrolling patients in Ukraine'), blank=True,
                                                          null=True)
-    NOT_RECRUITING_YET = _('Not recruiting yet')
-    RECRUITING = _('Recruiting')
-    INVITATION_RECRUITING = _('On invitation recruiting')
-    NOT_RECRUITING = _('Not recruiting')
-    STUDY_END = _('Study end')
-    STUDY_PAUSE = _('Study pause')
-    STUDY_TERMINATED_BEFORE_RECRUITING = _('Study terminated before recruiting')
-    STUDY_STATUS_UNKNOWN = _('Study status unknown')
-    NOT_HEALTHY_RECRUITS = _('Not healthy recruits')
+    NOT_RECRUITING_YET = _('This study is not yet open for participant recruitment')
+    RECRUITING = _('This study is currently recruiting participants')
+    INVITATION_RECRUITING = _('This study is enrolling participants by invitation only')
+    NOT_RECRUITING = _('This study is ongoing, but not recruiting participants')
+    STUDY_END = _('This study has been completed')
+    STUDY_PAUSE = _('This study has been terminated')
+    STUDY_TERMINATED_BEFORE_RECRUITING = _('This study has been withdrawn prior to enrollment')
+    STUDY_STATUS_UNKNOWN = _('The recruitment status of this study is unknown because the information has not been'
+                             ' verified recently')
+    NO_HEALTHY_RECRUITS = _('This study is not recruiting participants')
     STATUS_CHOICES = (
         (NOT_RECRUITING_YET, _('Not recruiting yet')),
         (RECRUITING, _('Recruiting')),
@@ -247,12 +366,23 @@ class StudyIdentifiers(models.Model):
         (STUDY_PAUSE, _('Study paused')),
         (STUDY_TERMINATED_BEFORE_RECRUITING, _('Study ended before recruiting')),
         (STUDY_STATUS_UNKNOWN, _('Unknown study status')),
-        (NOT_HEALTHY_RECRUITS, _('Recruits with decease only'))
+        (NO_HEALTHY_RECRUITS, _('Recruits with decease only'))
     )
-    study_status = models.CharField(_('study status'), max_length=50, choices=STATUS_CHOICES, default=None, null=True)
+    start_date_of_enrolling_in_ukraine = models.DateTimeField(_('start date of enrolling patients in Ukraine'),
+                                                              blank=True, null=True)
+    study_status = models.CharField(_('study status'), max_length=250, choices=STATUS_CHOICES, default=None, null=True)
+    estimated_last_day_date = models.DateTimeField(_('estimated study completion date'), null=True, blank=True)
     last_day_date = models.DateTimeField(_('study completion date'), null=True, blank=True)
+    final_enrollment_ukraine_according_moh_ukraine = models.IntegerField(_('Final Enrollment in Ukraine according to'
+                                                                           ' MoH of Ukraine'), blank=True, null=True)
+    final_enrollment_ukraine_according_company = models.IntegerField(_('Final Enrollment in Ukraine according to '
+                                                                       'company'), blank=True, null=True)
     last_updated_date = models.DateTimeField(_('last updated date'), blank=True, null=True)
-
+    investigation_products = models.ForeignKey(InvestigationalProducts, verbose_name=_('investigational products'),
+                                               null=True, blank=True)
+    comparators = models.ForeignKey(Comparators, verbose_name=_('comparators'), null=True, blank=True)
+    study_related_materials = models.ForeignKey(StudyRelatedMaterials, verbose_name=_('study related materials'),
+                                                null=True, blank=True)
     # created_date = models.DateTimeField(default=timezone.now)
 
     # def clinical_trials_identifier(self):
@@ -264,69 +394,6 @@ class StudyIdentifiers(models.Model):
 
     def __str__(self):
         return self.sponsor_protocol_number
-
-
-@python_2_unicode_compatible
-class InvestigationProducts(models.Model):
-    form = models.CharField(max_length=100, null=True, blank=True)
-    doze = models.CharField(max_length=100, null=True, blank=True)
-    manufacturer = models.CharField(max_length=100, null=True, blank=True)
-    country = models.CharField(max_length=100, null=True, blank=True)
-
-    class Meta:
-        verbose_name = 'investigation product'
-        verbose_name_plural = 'investigation products'
-
-    def __str__(self):
-        return self.form
-
-
-@python_2_unicode_compatible
-class Comparators(models.Model):
-    form = models.CharField(_('form'), max_length=100, null=True, blank=True)
-    doze = models.CharField(_('doze'), max_length=100, blank=True, null=True)
-    manufacturer = models.CharField(_('manufacturer'), max_length=100, null=True, blank=True)
-    country = models.CharField(_('country'), max_length=100, null=True, blank=True)
-
-    class Meta:
-        verbose_name = _('comparator')
-        verbose_name_plural = _('comparators')
-
-    def __str__(self):
-        return self.form
-
-
-@python_2_unicode_compatible
-class StudyRelatedMaterials(models.Model):
-    name = models.CharField(_('name'), max_length=100, null=True, blank=True)
-    manufacturer = models.CharField(_('manufacturer'), max_length=100, null=True, blank=True)
-    country = models.CharField(_('country'), max_length=100, null=True, blank=True)
-
-    class Meta:
-        ordering = ('name',)
-        verbose_name = _('study related material')
-        verbose_name_plural = _('study related materials')
-
-    def __str__(self):
-        return self.name
-
-
-@python_2_unicode_compatible
-class AllStudyRelatedMaterials(models.Model):
-    name = models.CharField(_('name'), max_length=100, null=True, blank=True)
-    investigation_products = models.ForeignKey(InvestigationProducts, verbose_name=_('investigation_products'),
-                                               null=True, blank=True)
-    comparators = models.ForeignKey(Comparators, verbose_name=_('comparators'), null=True, blank=True)
-    study_related_materials = models.ForeignKey(StudyRelatedMaterials, verbose_name=_('study related materials'),
-                                                null=True, blank=True)
-
-    class Meta:
-        ordering = ('name',)
-        verbose_name = _('all study-related materials')
-        verbose_name_plural = _('all study-related materials')
-
-    def __str__(self):
-        return self.name
 
 
 @python_2_unicode_compatible
@@ -646,3 +713,19 @@ class ClinicalStudySite(models.Model):
 
     def __str__(self):
         return self.city
+
+
+@python_2_unicode_compatible
+class Study(models.Model):
+    study_id = models.ForeignKey(StudyIdentifiers)
+    general_info = models.ForeignKey(GeneralInformation)
+    eligibility = models.ForeignKey(Eligibility)
+    clinical_study_sites = models.ForeignKey(ClinicalStudySite)
+    contacts = models.ForeignKey(Contacts)
+
+    class Meta:
+        verbose_name = _('study')
+        verbose_name_plural = _('studies')
+
+    def __str__(self):
+        return self.study_id or u''

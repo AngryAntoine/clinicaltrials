@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-08 21:05+0300\n"
+"POT-Creation-Date: 2016-06-21 20:32+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,857 +19,1105 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: clinicaltrials/settings.py:115
-msgid "Ukrainian"
-msgstr "Українська"
-
-#: clinicaltrials/settings.py:116
+#: clinicaltrials/settings.py:129
 msgid "English"
-msgstr "Англійська"
+msgstr "Англійський"
+
+#: clinicaltrials/settings.py:130
+msgid "Ukrainian"
+msgstr "Український"
 
 #: study/admin.py:10
 msgid "Item"
-msgstr ""
+msgstr "Одиниця"
 
 #: study/admin.py:12
 #, fuzzy
 #| msgid "description"
 msgid "Description"
-msgstr "опис"
+msgstr "Найменування"
 
 #: study/models.py:11
 msgid "condition name"
-msgstr "назва дослідження"
+msgstr "Назва захворювання"
 
-#: study/models.py:12 study/models.py:330 study/models.py:344
+#: study/models.py:12 study/models.py:390 study/models.py:404
 msgid "description"
-msgstr "опис"
+msgstr "найменування"
 
-#: study/models.py:18
-msgid "condition"
-msgstr "умова"
+#: study/models.py:13
+#, fuzzy
+#| msgid "description"
+msgid "description ukrainian"
+msgstr "найменування"
 
 #: study/models.py:19
-msgid "conditions"
-msgstr "умови"
+msgid "condition"
+msgstr "Назва захворювання"
 
-#: study/models.py:27 study/models.py:59
-msgid "Choose condition"
-msgstr "оберіть умову"
+#: study/models.py:20
+msgid "conditions"
+msgstr "Назва захворювань"
 
 #: study/models.py:28 study/models.py:60
+#, fuzzy
+#| msgid "therapeutic area"
+msgid "Therapeutic area"
+msgstr "розділ медицини"
+
+#: study/models.py:29 study/models.py:61
 msgid "Andrology"
 msgstr "Андрологія"
 
-#: study/models.py:29 study/models.py:61
-msgid "Asthma & Allergy"
-msgstr "Астма і алергія"
-
 #: study/models.py:30 study/models.py:62
-msgid "Cardiology & Vascular Diseases"
-msgstr ""
+msgid "Asthma & Allergy"
+msgstr "Астма та Алергологія"
 
 #: study/models.py:31 study/models.py:63
-msgid "Dermatology"
-msgstr ""
+msgid "Cardiology & Vascular Diseases"
+msgstr "Кардіологія та Серцево-судинні захворювання"
 
 #: study/models.py:32 study/models.py:64
-msgid "Dentistry"
-msgstr ""
+msgid "Dermatology"
+msgstr "Дерматологія"
 
 #: study/models.py:33 study/models.py:65
+msgid "Dentistry"
+msgstr "Стоматологія"
+
+#: study/models.py:34 study/models.py:66
 msgid "Endocrinology"
 msgstr ""
 
-#: study/models.py:34 study/models.py:66
-msgid "Gastroentorology"
-msgstr ""
-
 #: study/models.py:35 study/models.py:67
-msgid "Gerontology & Geriatrics"
-msgstr ""
+msgid "Gastroentorology"
+msgstr "Ендокринологія"
 
 #: study/models.py:36 study/models.py:68
-msgid "Healthy Volunteers"
-msgstr ""
+msgid "Gerontology & Geriatrics"
+msgstr "Геронтологія та Геріатрія"
 
 #: study/models.py:37 study/models.py:69
-msgid "Hematology"
-msgstr ""
+msgid "Healthy Volunteers"
+msgstr "Здорові добровольці"
 
 #: study/models.py:38 study/models.py:70
-msgid "Hepatoogy"
-msgstr ""
+msgid "Hematology"
+msgstr "Гематологія"
 
 #: study/models.py:39 study/models.py:71
-msgid "Immunology"
-msgstr ""
+#, fuzzy
+#| msgid "Hepatology"
+msgid "Hepatoogy"
+msgstr "Гепатологія"
 
 #: study/models.py:40 study/models.py:72
-msgid "Infectious Diseases"
-msgstr ""
+msgid "Immunology"
+msgstr "Імунологія"
 
 #: study/models.py:41 study/models.py:73
-msgid "Medical Device"
-msgstr ""
+msgid "Infectious Diseases"
+msgstr "Інфекційні захворювання"
 
 #: study/models.py:42 study/models.py:74
-msgid "Neurology"
-msgstr ""
+msgid "Medical Device"
+msgstr "Медичні Пристрої"
 
 #: study/models.py:43 study/models.py:75
-msgid "Nephrology"
-msgstr ""
+msgid "Neurology"
+msgstr "Неврологія"
 
 #: study/models.py:44 study/models.py:76
-msgid "Obstetrics & Gynaecology (OB&GYN)"
-msgstr ""
+msgid "Nephrology"
+msgstr "Нефрологія"
 
 #: study/models.py:45 study/models.py:77
-msgid "Oncology"
-msgstr ""
+msgid "Obstetrics & Gynaecology (OB&GYN)"
+msgstr "Вагітність та Гінекологія"
 
 #: study/models.py:46 study/models.py:78
-msgid "Ophthalmology"
-msgstr ""
+msgid "Oncology"
+msgstr "Онкологія"
 
 #: study/models.py:47 study/models.py:79
-msgid "Otorhinolaryngology"
-msgstr ""
+msgid "Ophthalmology"
+msgstr "Офтальмологія"
 
 #: study/models.py:48 study/models.py:80
-msgid "Pediatrics"
-msgstr ""
+msgid "Otorhinolaryngology"
+msgstr "Оториноларингологія"
 
 #: study/models.py:49 study/models.py:81
-msgid "Plastic Surgery"
-msgstr ""
+msgid "Pediatrics"
+msgstr "Педіатрія"
 
 #: study/models.py:50 study/models.py:82
-msgid "Psychiatry"
-msgstr ""
+msgid "Plastic Surgery"
+msgstr "Пластична хірургія"
 
 #: study/models.py:51 study/models.py:83
-msgid "Pulmonology"
-msgstr ""
+msgid "Psychiatry"
+msgstr "Психіатрія"
 
 #: study/models.py:52 study/models.py:84
-msgid "Reproductive Medicine"
-msgstr ""
+msgid "Pulmonology"
+msgstr "Пульмонологія"
 
 #: study/models.py:53 study/models.py:85
-msgid "Rheumatology"
-msgstr ""
+msgid "Reproductive Medicine"
+msgstr "Репродуктологія"
 
 #: study/models.py:54 study/models.py:86
-msgid "Surgery"
-msgstr ""
+msgid "Rheumatology"
+msgstr "Ревматологія"
 
 #: study/models.py:55 study/models.py:87
-msgid "Traumatology"
-msgstr ""
+msgid "Surgery"
+msgstr "Хірургія"
 
 #: study/models.py:56 study/models.py:88
-msgid "Urology"
-msgstr ""
+msgid "Traumatology"
+msgstr "Травматологія"
 
 #: study/models.py:57 study/models.py:89
+msgid "Urology"
+msgstr "Урологія"
+
+#: study/models.py:58 study/models.py:90
 msgid "Venerology"
-msgstr ""
+msgstr "Венерологія"
 
-#: study/models.py:91
+#: study/models.py:92
 msgid "decease name"
-msgstr ""
+msgstr "назва захворювання"
 
-#: study/models.py:95 study/models.py:105
+#: study/models.py:96 study/models.py:107 study/models.py:121
 msgid "therapeutic area"
-msgstr ""
+msgstr "розділ медицини"
 
-#: study/models.py:96
+#: study/models.py:97
 msgid "therapeutic areas"
-msgstr ""
+msgstr "розділи медицини"
 
-#: study/models.py:104
-msgid "disease name"
-msgstr ""
+#: study/models.py:105 study/models.py:124
+#, fuzzy
+#| msgid "medical institution"
+msgid "medical condition"
+msgstr "Медичний заклад"
 
-#: study/models.py:109
+#: study/models.py:106
+#, fuzzy
+#| msgid "medical educational institution"
+msgid "medical condition ukrainian"
+msgstr "Вищий медичний навчальний заклад"
+
+#: study/models.py:111
 msgid "disease"
-msgstr ""
+msgstr "захворювання"
 
-#: study/models.py:110
+#: study/models.py:112
 msgid "diseases"
-msgstr ""
+msgstr "захворювань"
 
-#: study/models.py:120
-msgid "decease_name"
-msgstr ""
-
-#: study/models.py:121
+#: study/models.py:125
 msgid "protocol title"
-msgstr ""
+msgstr "Назва клінічного дослідження, версія та дата"
 
-#: study/models.py:122
+#: study/models.py:126
+#, fuzzy
+#| msgid "protocol title"
+msgid "protocol title ukrainian"
+msgstr "Назва клінічного дослідження, версія та дата"
+
+#: study/models.py:127
 msgid "detailed description"
-msgstr ""
+msgstr "Детальний опис"
 
-#: study/models.py:141
-msgid "phase"
-msgstr ""
+#: study/models.py:128
+#, fuzzy
+#| msgid "detailed description"
+msgid "detailed description ukrainian"
+msgstr "Детальний опис"
 
-#: study/models.py:142 study/models.py:145
-msgid "Interventional"
-msgstr ""
+#: study/models.py:129
+msgid "purpose"
+msgstr "Мета клінічного дослідження"
 
-#: study/models.py:143 study/models.py:146
-msgid "Non-Interventional"
-msgstr ""
+#: study/models.py:130
+#, fuzzy
+#| msgid "sponsor name"
+msgid "purpose ukrainian"
+msgstr "Спонсор"
 
-#: study/models.py:148
-msgid "study type"
-msgstr ""
-
-#: study/models.py:150 study/models.py:156
-msgid "Endpoint Classification"
-msgstr ""
+#: study/models.py:139 study/models.py:149
+#, fuzzy
+#| msgid "registration desk"
+msgid "pre-registration"
+msgstr "Номер телефону медичного закладу. Реєстратура"
 
 #: study/models.py:151
-msgid "Intervention Model"
-msgstr ""
+msgid "phase"
+msgstr "Фаза"
 
-#: study/models.py:152 study/models.py:158
-msgid "Masking"
-msgstr ""
+#: study/models.py:152 study/models.py:155
+msgid "Interventional"
+msgstr "Інтервенційне"
 
-#: study/models.py:153
-msgid "Primary Purpose"
-msgstr ""
+#: study/models.py:153 study/models.py:156
+msgid "Non-Interventional"
+msgstr "Неінтервенційне"
 
-#: study/models.py:155
+#: study/models.py:158
+msgid "study type"
+msgstr "Тип клінічного дослідження"
+
+#: study/models.py:159 study/models.py:165
 msgid "Allocation"
-msgstr ""
+msgstr "Розподіл"
 
-#: study/models.py:157
-msgid "Intervention model"
-msgstr ""
-
-#: study/models.py:159
-msgid "Primary purpose"
-msgstr ""
+#: study/models.py:160 study/models.py:166
+msgid "Endpoint Classification"
+msgstr "Кінцеві точки"
 
 #: study/models.py:161
-msgid "study design"
-msgstr ""
+msgid "Intervention Model"
+msgstr "Інтервенційна модель"
+
+#: study/models.py:162 study/models.py:168
+msgid "Masking"
+msgstr "Маскування"
 
 #: study/models.py:163
-msgid "purpose"
+msgid "Primary Purpose"
+msgstr "Мета клінічного дослідження"
+
+#: study/models.py:167
+msgid "Intervention model"
+msgstr "Інтервенційна модель"
+
+#: study/models.py:169
+msgid "Primary purpose"
+msgstr "Мета клінічного дослідження"
+
+#: study/models.py:171
+msgid "study design"
+msgstr "Дизайн клінічного дослідження"
+
+#: study/models.py:173
+msgid "quantity of trial sites"
 msgstr ""
 
-#: study/models.py:176
-msgid "sponsor name"
+#: study/models.py:174 study/models.py:183
+msgid "randomized"
 msgstr ""
 
-#: study/models.py:177 study/models.py:189 study/models.py:592
-msgid "address"
+#: study/models.py:175 study/models.py:184
+#, fuzzy
+#| msgid "contry"
+msgid "controlled"
+msgstr "Країна"
+
+#: study/models.py:176 study/models.py:185
+msgid "opened"
 msgstr ""
 
-#: study/models.py:178 study/models.py:190
-msgid "phone"
+#: study/models.py:177 study/models.py:186
+msgid "simple blind"
 msgstr ""
 
-#: study/models.py:179 study/models.py:191
-msgid "email"
+#: study/models.py:178 study/models.py:187
+msgid "double blind"
 msgstr ""
 
-#: study/models.py:180 study/models.py:192
-msgid "link"
+#: study/models.py:179 study/models.py:188
+msgid "with parallel groups"
 msgstr ""
 
-#: study/models.py:188
-msgid "company name"
+#: study/models.py:180 study/models.py:189
+msgid "crossed"
 msgstr ""
 
-#: study/models.py:196
-msgid "company"
+#: study/models.py:181 study/models.py:190
+#, fuzzy
+#| msgid "comparator"
+msgid "comparative"
+msgstr "Препарат порівняння"
+
+#: study/models.py:192
+msgid "clinical study"
 msgstr ""
 
-#: study/models.py:197
-msgid "companies"
+#: study/models.py:194 study/models.py:197
+msgid "only in ukraine"
 msgstr ""
 
-#: study/models.py:207
-msgid "Sponsor's protocol number"
-msgstr ""
+#: study/models.py:195 study/models.py:198
+#, fuzzy
+#| msgid "Non-Interventional"
+msgid "in countries (International)"
+msgstr "Неінтервенційне"
 
-#: study/models.py:208
-msgid "ClinicalTrials.com.ua Identifier"
-msgstr ""
-
-#: study/models.py:210
-msgid "ClinicalTrials.gov Identifier"
-msgstr ""
-
-#: study/models.py:212
-msgid "ClinicalTrials.gov link"
-msgstr ""
-
-#: study/models.py:213
-msgid "EudraCT number"
+#: study/models.py:200
+msgid "clinical study is conducted"
 msgstr ""
 
 #: study/models.py:214
-msgid "EudraCT link"
-msgstr ""
+msgid "sponsor name"
+msgstr "Спонсор"
 
-#: study/models.py:215
-msgid "MOH of Ukraine"
-msgstr ""
+#: study/models.py:215 study/models.py:229
+#, fuzzy
+#| msgid "sponsor name"
+msgid "sponsor name ukrainian"
+msgstr "Спонсор"
 
-#: study/models.py:216
-msgid "MOH of Ukraine link"
-msgstr ""
+#: study/models.py:216 study/models.py:230 study/models.py:665
+msgid "address"
+msgstr "Адреса"
 
-#: study/models.py:217
-msgid "sponsor"
-msgstr ""
+#: study/models.py:217 study/models.py:231
+#, fuzzy
+#| msgid "Ukrainian"
+msgid "address ukrainian"
+msgstr "Український"
 
-#: study/models.py:219
-msgid "Estimated enrollment in general according to clinicaltrials.com"
-msgstr ""
+#: study/models.py:218 study/models.py:232
+msgid "phone"
+msgstr "Номер телефону"
 
-#: study/models.py:221
-msgid "Estimated enrollment in general according to MOH of Ukraine"
-msgstr ""
+#: study/models.py:219 study/models.py:233
+msgid "email"
+msgstr "Електрона пошта"
 
-#: study/models.py:223
-msgid "Estimated enrollment in general according to \"Company\""
-msgstr ""
-
-#: study/models.py:225
-msgid "Estimated enrollment in Ukraine according to MOH of Ukraine"
-msgstr ""
-
-#: study/models.py:226
-msgid "Estimated enrollment in Ukraine according to \"Company\""
-msgstr ""
+#: study/models.py:220 study/models.py:234
+msgid "link"
+msgstr "Посилання"
 
 #: study/models.py:228
-msgid "start date of enrolling patients in Ukraine"
-msgstr ""
+msgid "company name"
+msgstr "Назва Компанії"
 
-#: study/models.py:229 study/models.py:239 study/models.py:603
-#: study/models.py:607
-msgid "Not recruiting yet"
-msgstr ""
+#: study/models.py:238
+msgid "company"
+msgstr "Компанія"
 
-#: study/models.py:230 study/models.py:240 study/models.py:604
-#: study/models.py:608
-msgid "Recruiting"
-msgstr ""
-
-#: study/models.py:231
-msgid "On invitation recruiting"
-msgstr ""
-
-#: study/models.py:232 study/models.py:242 study/models.py:609
-msgid "Not recruiting"
-msgstr ""
-
-#: study/models.py:233
-msgid "Study end"
-msgstr ""
-
-#: study/models.py:234
-msgid "Study pause"
-msgstr ""
-
-#: study/models.py:235
-msgid "Study terminated before recruiting"
-msgstr ""
-
-#: study/models.py:236
-msgid "Study status unknown"
-msgstr ""
-
-#: study/models.py:237
-msgid "Not healthy recruits"
-msgstr ""
-
-#: study/models.py:241
-msgid "Invitation needed"
-msgstr ""
-
-#: study/models.py:243
-msgid "Study finished"
-msgstr ""
-
-#: study/models.py:244
-msgid "Study paused"
-msgstr ""
-
-#: study/models.py:245
-msgid "Study ended before recruiting"
-msgstr ""
-
-#: study/models.py:246
-msgid "Unknown study status"
-msgstr ""
-
-#: study/models.py:247
-msgid "Recruits with decease only"
-msgstr ""
+#: study/models.py:239
+msgid "companies"
+msgstr "Компанії"
 
 #: study/models.py:249
-msgid "study status"
-msgstr ""
+msgid "Sponsor's protocol number"
+msgstr "Код клінічного дослідження (надається Спонсором)"
 
 #: study/models.py:250
-msgid "study completion date"
-msgstr ""
+msgid "ClinicalTrials.com.ua Identifier"
+msgstr "СlinicalTrials.com.ua ідентифікатор"
 
-#: study/models.py:251
-msgid "last updated date"
-msgstr ""
+#: study/models.py:252
+msgid "ClinicalTrials.gov Identifier"
+msgstr "ClinicalTrials.gov ідентифікатор"
+
+#: study/models.py:254
+msgid "ClinicalTrials.gov link"
+msgstr "ClinicalTrials.gov посилання"
+
+#: study/models.py:256
+msgid "EudraCT number"
+msgstr "EudraCT номер"
+
+#: study/models.py:257
+#, fuzzy
+#| msgid "EudraCT number"
+msgid "EudraCT number ukrainian"
+msgstr "EudraCT номер"
 
 #: study/models.py:258
-msgid "study identifier"
-msgstr ""
+msgid "EudraCT link"
+msgstr "EudraCT посилання"
 
 #: study/models.py:259
-msgid "study identifiers"
+msgid "MOH of Ukraine"
+msgstr ""
+"Затвердження клінічного дослідження в Україні згідно «Наказу МОЗ України "
+"\"Про проведення клінічного дослідження лікарського засобу та затвердження "
+"суттєвої поправки\""
+
+#: study/models.py:260
+#, fuzzy
+#| msgid "MOH of Ukraine link"
+msgid "MOH of Ukraine ukrainian"
+msgstr ""
+"Затвердження клінічного дослідження в Україні згідно «Наказу МОЗ України "
+"\"Про проведення клінічного дослідження лікарського засобу та затвердження "
+"суттєвої поправки\""
+
+#: study/models.py:261
+msgid "MOH of Ukraine link"
+msgstr ""
+"Затвердження клінічного дослідження в Україні згідно «Наказу МОЗ України "
+"\"Про проведення клінічного дослідження лікарського засобу та затвердження "
+"суттєвої поправки\""
+
+#: study/models.py:262
+msgid "sponsor, country"
+msgstr "Спонсор, країна"
+
+#: study/models.py:263
+msgid "Company that controls conducting of clinical study in Ukraine"
+msgstr "Компанія, яка контролює проведення клінічного дослідження в Україні"
+
+#: study/models.py:266
+#, fuzzy
+#| msgid "Estimated enrollment in general according to clinicaltrials.gov"
+msgid "Estimated enrollment in general according to clinicaltrials.gov"
+msgstr ""
+"Запланована кількість пацієнтів (здорових добровольців) в цілому, за даними "
+"clinicaltrials.gov"
+
+#: study/models.py:268
+msgid "Estimated enrollment in general according to MOH of Ukraine"
+msgstr ""
+"Запланована кількість пацієнтів (здорових добровольців) в цілому, за даними "
+"МОЗ України"
+
+#: study/models.py:270
+msgid "Estimated enrollment in general according to \"Company\""
+msgstr ""
+"Запланована кількість пацієнтів (здорових добровольців) в цілому, за даними "
+"«Компанія»"
+
+#: study/models.py:272 study/models.py:273
+msgid "Estimated enrollment in Ukraine according to MOH of Ukraine"
+msgstr ""
+"Запланована кількість пацієнтів (здорових добровольців) в Україні, за даними "
+"МОЗ України"
+
+#: study/models.py:275
+msgid "Estimated enrollment in Ukraine according to \"Company\""
+msgstr ""
+"Запланована кількість пацієнтів (здорових добровольців) в Україні, за даними "
+"«Компанія»"
+
+#: study/models.py:277 study/models.py:300
+msgid "start date of enrolling patients in Ukraine"
+msgstr "Дата початку набору пацієнтів (здорових добровольців) в Україні"
+
+#: study/models.py:279
+msgid "This study is not yet open for participant recruitment"
+msgstr ""
+
+#: study/models.py:280
+msgid "This study is currently recruiting participants"
+msgstr ""
+
+#: study/models.py:281
+msgid "This study is enrolling participants by invitation only"
 msgstr ""
 
 #: study/models.py:282
-msgid "form"
+msgid "This study is ongoing, but not recruiting participants"
 msgstr ""
 
 #: study/models.py:283
-msgid "doze"
+msgid "This study has been completed"
 msgstr ""
 
-#: study/models.py:284 study/models.py:298
-msgid "manufacturer"
+#: study/models.py:284
+msgid "This study has been terminated"
 msgstr ""
 
-#: study/models.py:285 study/models.py:299
-msgid "country"
+#: study/models.py:285
+msgid "This study has been withdrawn prior to enrollment"
+msgstr ""
+
+#: study/models.py:286
+msgid ""
+"The recruitment status of this study is unknown because the information has "
+"not been verified recently"
 msgstr ""
 
 #: study/models.py:288
-msgid "comparator"
+msgid "This study is not recruiting participants"
 msgstr ""
 
-#: study/models.py:289 study/models.py:315
-msgid "comparators"
+#: study/models.py:290 study/models.py:683 study/models.py:687
+msgid "Not recruiting yet"
 msgstr ""
+"Це дослідження на даний час ще не набирає пацієнтів (здорових добровольців)"
 
-#: study/models.py:297 study/models.py:312 study/models.py:329
-#: study/models.py:343 study/models.py:357 study/models.py:390
-#: study/models.py:403 study/models.py:416 study/models.py:429
-#: study/models.py:465 study/models.py:513
-msgid "name"
+#: study/models.py:291 study/models.py:684 study/models.py:688
+msgid "Recruiting"
+msgstr "Це дослідження на даний час набирає пацієнтів (здорових добровольців)"
+
+#: study/models.py:292
+msgid "Invitation needed"
 msgstr ""
+"Це дослідження на даний час набирає пацієнтів (здорових добровольців) тільки "
+"за запрошенням"
+
+#: study/models.py:293 study/models.py:685 study/models.py:689
+msgid "Not recruiting"
+msgstr ""
+"Це дослідження на даний час вже не набирає пацієнтів (здорових добровольців)"
+
+#: study/models.py:294
+msgid "Study finished"
+msgstr "Дане клінічне дослідження завершено"
+
+#: study/models.py:295
+msgid "Study paused"
+msgstr "Дане клінічне дослідження було припинено"
+
+#: study/models.py:296
+msgid "Study ended before recruiting"
+msgstr ""
+"Дане клінічне дослідження було відкликано до початку набору пацієнтів "
+"(здорових добровольців)"
+
+#: study/models.py:297
+msgid "Unknown study status"
+msgstr ""
+"Статус набора пацієнтів (здорових добровольців) в дане дослідження є "
+"невідомим, тому що інформація чи не була надана, чи не була підтверджена"
+
+#: study/models.py:298
+msgid "Recruits with decease only"
+msgstr "В дане дослідження пацієнті (здорові добровольці) не набираються"
+
+#: study/models.py:302
+msgid "study status"
+msgstr "Статус клінічного дослідження"
 
 #: study/models.py:303
+#, fuzzy
+#| msgid "study completion date"
+msgid "estimated study completion date"
+msgstr "Дата завершення клінічного дослідження"
+
+#: study/models.py:304
+msgid "study completion date"
+msgstr "Дата завершення клінічного дослідження"
+
+#: study/models.py:305
+#, fuzzy
+#| msgid "Estimated enrollment in Ukraine according to MOH of Ukraine"
+msgid "Final Enrollment in Ukraine according to MoH of Ukraine"
+msgstr ""
+"Запланована кількість пацієнтів (здорових добровольців) в Україні, за даними "
+"МОЗ України"
+
+#: study/models.py:307
+#, fuzzy
+#| msgid "Estimated enrollment in Ukraine according to \"Company\""
+msgid "Final Enrollment in Ukraine according to company"
+msgstr ""
+"Запланована кількість пацієнтів (здорових добровольців) в Україні, за даними "
+"«Компанія»"
+
+#: study/models.py:309
+msgid "last updated date"
+msgstr ""
+"Останнє оновлення інформації об клінічному дослідженні на сайті "
+"СlinicalTrials.com.ua"
+
+#: study/models.py:317
+msgid "study identifier"
+msgstr "Ідентифікатор клінічного дослідження"
+
+#: study/models.py:318
+msgid "study identifiers"
+msgstr "Ідентифікатори клінічного дослідження"
+
+#: study/models.py:341
+msgid "form"
+msgstr "Лікарська форма"
+
+#: study/models.py:342
+msgid "doze"
+msgstr "Дозування"
+
+#: study/models.py:343 study/models.py:357
+msgid "manufacturer"
+msgstr "Виробник"
+
+#: study/models.py:344 study/models.py:358
+msgid "country"
+msgstr "Країна"
+
+#: study/models.py:347
+msgid "comparator"
+msgstr "Препарат порівняння"
+
+#: study/models.py:348 study/models.py:374
+msgid "comparators"
+msgstr "Препарати порівняння"
+
+#: study/models.py:356 study/models.py:371 study/models.py:389
+#: study/models.py:403 study/models.py:417 study/models.py:471
+#: study/models.py:484 study/models.py:497 study/models.py:533
+#: study/models.py:582
+msgid "name"
+msgstr "Ім’я"
+
+#: study/models.py:362
 msgid "study related material"
-msgstr ""
+msgstr "Супутні матеріали/Препарат супутньої терапії"
 
-#: study/models.py:304 study/models.py:316
+#: study/models.py:363 study/models.py:375
 msgid "study related materials"
-msgstr ""
+msgstr "Супутні матеріали/Препарати супутньої терапії"
 
-#: study/models.py:313
+#: study/models.py:372
 msgid "investigation_products"
-msgstr ""
+msgstr "Досліджувані лікарські засоби"
 
-#: study/models.py:320
-msgid "material"
+#: study/models.py:380 study/models.py:381
+msgid "all study-related materials"
 msgstr ""
+"Досліджувані лікарські засоби, препарати порівняння, препарати супутньої "
+"терапії та супутні матеріали"
 
-#: study/models.py:321
-msgid "materials"
-msgstr ""
-
-#: study/models.py:334 study/models.py:335 study/models.py:376
+#: study/models.py:394 study/models.py:395 study/models.py:441
 msgid "inclusion criteria"
-msgstr ""
+msgstr "Критерії включення"
 
-#: study/models.py:348 study/models.py:349 study/models.py:377
+#: study/models.py:408 study/models.py:409 study/models.py:442
 msgid "exclusion criteria"
-msgstr ""
+msgstr "Критерії виключення"
 
-#: study/models.py:358
-msgid "age"
-msgstr ""
+#: study/models.py:418
+msgid "age from"
+msgstr "Вік з"
 
-#: study/models.py:359 study/models.py:363
+#: study/models.py:419
+msgid "age to"
+msgstr "Вік до"
+
+#: study/models.py:420 study/models.py:424
 msgid "Female and Male"
-msgstr ""
+msgstr "Чоловік та жінка"
 
-#: study/models.py:360 study/models.py:364
+#: study/models.py:421 study/models.py:425
 msgid "Female"
-msgstr ""
+msgstr "Жінка"
 
-#: study/models.py:361 study/models.py:365
+#: study/models.py:422 study/models.py:426
 msgid "Male"
-msgstr ""
+msgstr "Чоловік"
 
-#: study/models.py:367
+#: study/models.py:428
 msgid "gender"
-msgstr ""
+msgstr "Стать"
 
-#: study/models.py:368 study/models.py:371
+#: study/models.py:429 study/models.py:432
 msgid "Yes"
-msgstr ""
+msgstr "Так"
 
-#: study/models.py:369 study/models.py:372
+#: study/models.py:430 study/models.py:433
 msgid "No"
-msgstr ""
+msgstr "Ні"
 
-#: study/models.py:374
+#: study/models.py:435
 msgid "healthy volunteers"
-msgstr ""
+msgstr "Залучення здорових добровольців"
 
-#: study/models.py:381 study/models.py:382
+#: study/models.py:446 study/models.py:447
 msgid "eligibility"
-msgstr ""
+msgstr "Хто може брати участь у клінічному випробуванні (критерії відбору)"
 
-#: study/models.py:394 study/models.py:395
-msgid "contacts"
-msgstr ""
+#: study/models.py:455
+msgid "full name of contact person provided by Sponsor"
+msgstr "П.І.Б. головного дослідника (Контактна особа від Спонсора)"
 
-#: study/models.py:407
-msgid "contry"
-msgstr ""
-
-#: study/models.py:408
-msgid "countries"
-msgstr ""
-
-#: study/models.py:420 study/models.py:479 study/models.py:585
-msgid "city"
-msgstr ""
-
-#: study/models.py:421
-msgid "cities"
-msgstr ""
-
-#: study/models.py:430 study/models.py:441
-msgid "Head of department"
-msgstr ""
-
-#: study/models.py:431 study/models.py:442
-msgid "Candidate of Medical Sciences"
-msgstr ""
-
-#: study/models.py:432 study/models.py:443
-msgid "Candidate of Biological Sciences"
-msgstr ""
-
-#: study/models.py:433 study/models.py:444
-msgid "Candidate of Philosophical Sciences"
-msgstr ""
-
-#: study/models.py:434 study/models.py:445
-msgid "Doctor of Medicine (M.D.)"
-msgstr ""
-
-#: study/models.py:435 study/models.py:446
-msgid "Doctor of Biological Sciences"
-msgstr ""
-
-#: study/models.py:436 study/models.py:447
-msgid "Doctor of Philosophy (PhD)"
-msgstr ""
-
-#: study/models.py:437 study/models.py:448
-msgid "Professor"
-msgstr ""
-
-#: study/models.py:438 study/models.py:449
-msgid "Academician"
-msgstr ""
-
-#: study/models.py:439 study/models.py:450
-msgid "PhD (Doctor of Pharmacy)"
-msgstr ""
-
-#: study/models.py:452
-msgid "position"
-msgstr ""
-
-#: study/models.py:456 study/models.py:586
-msgid "principal investigator"
-msgstr ""
+#: study/models.py:456
+msgid "telephone number of contact person provided by Sponsor"
+msgstr "Номер телефону головного дослідника (Контактна особа від Спонсора)"
 
 #: study/models.py:457
+msgid "fax of contact person provided by Sponsor"
+msgstr "Факс головного дослідника (Контактна особа від Спонсора)"
+
+#: study/models.py:458
+msgid "email of contact person provided by Sponsor"
+msgstr "Електронна пошта головного дослідника (Контактна особа від Спонсора)"
+
+#: study/models.py:462 study/models.py:463
+msgid "contacts"
+msgstr "Контакти"
+
+#: study/models.py:475
+msgid "contry"
+msgstr "Країна"
+
+#: study/models.py:476
+msgid "countries"
+msgstr "Країни"
+
+#: study/models.py:488 study/models.py:547 study/models.py:655
+msgid "city"
+msgstr "Місто"
+
+#: study/models.py:489
+msgid "cities"
+msgstr "Міста"
+
+#: study/models.py:498 study/models.py:509
+msgid "Head of department"
+msgstr "зав. від."
+
+#: study/models.py:499 study/models.py:510
+msgid "Candidate of Medical Sciences"
+msgstr "к.м.н."
+
+#: study/models.py:500 study/models.py:511
+msgid "Candidate of Biological Sciences"
+msgstr "к.б.н."
+
+#: study/models.py:501 study/models.py:512
+msgid "Candidate of Philosophical Sciences"
+msgstr "к.ф.н."
+
+#: study/models.py:502 study/models.py:513
+msgid "Doctor of Medicine (M.D.)"
+msgstr "д.м.н."
+
+#: study/models.py:503 study/models.py:514
+msgid "Doctor of Biological Sciences"
+msgstr "д.б.н."
+
+#: study/models.py:504 study/models.py:515
+msgid "Doctor of Philosophy (PhD)"
+msgstr "д.ф.н."
+
+#: study/models.py:505 study/models.py:516
+msgid "Professor"
+msgstr "проф."
+
+#: study/models.py:506 study/models.py:517
+msgid "Academician"
+msgstr "акад."
+
+#: study/models.py:507 study/models.py:518
+msgid "PhD (Doctor of Pharmacy)"
+msgstr "PhD"
+
+#: study/models.py:520
+msgid "position"
+msgstr "Посада"
+
+#: study/models.py:524 study/models.py:656
+msgid "principal investigator"
+msgstr "Відповідальний дослідник"
+
+#: study/models.py:525
 msgid "principal investigators"
-msgstr ""
+msgstr "Відповідальні дослідники"
 
-#: study/models.py:469 study/models.py:470
+#: study/models.py:537 study/models.py:538
 msgid "head of department"
-msgstr ""
+msgstr "Завідувач відділенням"
 
-#: study/models.py:478
+#: study/models.py:546
 msgid "index"
-msgstr ""
+msgstr "Індекс"
 
-#: study/models.py:480 study/models.py:483
+#: study/models.py:548 study/models.py:551
 msgid "City"
-msgstr ""
+msgstr "Місто"
 
-#: study/models.py:481 study/models.py:484
+#: study/models.py:549 study/models.py:552
 msgid "Village"
-msgstr ""
+msgstr "Селище"
 
-#: study/models.py:486
+#: study/models.py:554
 msgid "inhabited locality"
-msgstr ""
+msgstr "Населений пункт"
 
-#: study/models.py:487 study/models.py:493
+#: study/models.py:556 study/models.py:562
 msgid "Street"
-msgstr ""
+msgstr "Вулиця"
 
-#: study/models.py:488 study/models.py:494
+#: study/models.py:557 study/models.py:563
 msgid "Square"
-msgstr ""
+msgstr "Площа"
 
-#: study/models.py:489 study/models.py:495
+#: study/models.py:558 study/models.py:564
 msgid "Boulevard"
-msgstr ""
+msgstr "Бульвар"
 
-#: study/models.py:490 study/models.py:496
+#: study/models.py:559 study/models.py:565
 msgid "Lane"
-msgstr ""
+msgstr "Лінія"
 
-#: study/models.py:491 study/models.py:497
+#: study/models.py:560 study/models.py:566
 msgid "Avenue"
-msgstr ""
+msgstr "Проспект"
 
-#: study/models.py:499
+#: study/models.py:568
 msgid "street type"
-msgstr ""
+msgstr "Тип вулиці"
 
-#: study/models.py:500
+#: study/models.py:569
 msgid "street name"
-msgstr ""
+msgstr "Назва вулиці"
 
-#: study/models.py:501
+#: study/models.py:570
 msgid "building number"
-msgstr ""
+msgstr "Номер будинку"
 
-#: study/models.py:504
+#: study/models.py:573
 msgid "place address"
-msgstr ""
+msgstr "Адреса"
 
-#: study/models.py:505
+#: study/models.py:574
 msgid "place addresses"
-msgstr ""
+msgstr "Адреси"
 
-#: study/models.py:514
+#: study/models.py:583
 msgid "information desk"
-msgstr ""
-
-#: study/models.py:515
-msgid "registration desk"
-msgstr ""
-
-#: study/models.py:516
-msgid "reception ward"
-msgstr ""
-
-#: study/models.py:517
-msgid "phone number"
-msgstr ""
-
-#: study/models.py:521
-msgid "medical institution phone number"
-msgstr ""
-
-#: study/models.py:522
-msgid "medical institution phone numbers"
-msgstr ""
-
-#: study/models.py:530 study/models.py:557
-msgid "Autonomous Republic of Crimea"
-msgstr ""
-
-#: study/models.py:531 study/models.py:558
-msgid "Cherkaska"
-msgstr ""
-
-#: study/models.py:532 study/models.py:559
-msgid "Chernihivska"
-msgstr ""
-
-#: study/models.py:533 study/models.py:560
-msgid "Chernivetska"
-msgstr ""
-
-#: study/models.py:534 study/models.py:561
-msgid "Dnipropetrovska"
-msgstr ""
-
-#: study/models.py:535 study/models.py:562
-msgid "Donetska"
-msgstr ""
-
-#: study/models.py:536 study/models.py:563
-msgid "Ivano-Frankivska"
-msgstr ""
-
-#: study/models.py:537 study/models.py:564
-msgid "Kharkivska"
-msgstr ""
-
-#: study/models.py:538 study/models.py:565
-msgid "Khersonska"
-msgstr ""
-
-#: study/models.py:539 study/models.py:566
-msgid "Khmelnytska"
-msgstr ""
-
-#: study/models.py:540 study/models.py:567
-msgid "Kirovohradska"
-msgstr ""
-
-#: study/models.py:541 study/models.py:568
-msgid "Kyiv"
-msgstr ""
-
-#: study/models.py:542 study/models.py:569
-msgid "Kyivska"
-msgstr ""
-
-#: study/models.py:543 study/models.py:570
-msgid "Luhanska"
-msgstr ""
-
-#: study/models.py:544 study/models.py:571
-msgid "Lvivska"
-msgstr ""
-
-#: study/models.py:545 study/models.py:572
-msgid "Mykolayivska"
-msgstr ""
-
-#: study/models.py:546 study/models.py:573
-msgid "Odeska"
-msgstr ""
-
-#: study/models.py:547 study/models.py:574
-msgid "Poltavska"
-msgstr ""
-
-#: study/models.py:548 study/models.py:575
-msgid "Rivnenska"
-msgstr ""
-
-#: study/models.py:549 study/models.py:576
-msgid "Sumska"
-msgstr ""
-
-#: study/models.py:550 study/models.py:577
-msgid "Ternopilska"
-msgstr ""
-
-#: study/models.py:551 study/models.py:578
-msgid "Vinnytska"
-msgstr ""
-
-#: study/models.py:552 study/models.py:579
-msgid "Volynska"
-msgstr ""
-
-#: study/models.py:553 study/models.py:580
-msgid "Zakarpatska"
-msgstr ""
-
-#: study/models.py:554 study/models.py:581
-msgid "Zaporizka"
-msgstr ""
-
-#: study/models.py:555 study/models.py:582
-msgid "Zhytomyrska"
-msgstr ""
+msgstr "Номер телефону медичного закладу. Довідкова"
 
 #: study/models.py:584
-msgid "region"
-msgstr ""
+msgid "registration desk"
+msgstr "Номер телефону медичного закладу. Реєстратура"
+
+#: study/models.py:585
+msgid "reception ward"
+msgstr "Номер телефону медичного закладу. Приймальне відділення"
 
 #: study/models.py:587
-msgid "principal investigator phone number"
-msgstr ""
-
-#: study/models.py:588
-msgid "medical institution"
-msgstr ""
-
-#: study/models.py:589
-msgid "medical institution department"
-msgstr ""
+msgid "phone number"
+msgstr "Номер телефону"
 
 #: study/models.py:591
-msgid "site"
-msgstr ""
+msgid "medical institution phone number"
+msgstr "Номер телефону медичного закладу"
 
-#: study/models.py:594
+#: study/models.py:592
+msgid "medical institution phone numbers"
+msgstr "Номери телефону медичного закладу"
+
+#: study/models.py:600 study/models.py:627
+msgid "Autonomous Republic of Crimea"
+msgstr "АР Крим"
+
+#: study/models.py:601 study/models.py:628
+msgid "Cherkaska"
+msgstr "Черкаська"
+
+#: study/models.py:602 study/models.py:629
+msgid "Chernihivska"
+msgstr "Чернігівська"
+
+#: study/models.py:603 study/models.py:630
+msgid "Chernivetska"
+msgstr "Чернівецька"
+
+#: study/models.py:604 study/models.py:631
+msgid "Dnipropetrovska"
+msgstr "Дніпропетровська"
+
+#: study/models.py:605 study/models.py:632
+msgid "Donetska"
+msgstr "Донецька"
+
+#: study/models.py:606 study/models.py:633
+msgid "Ivano-Frankivska"
+msgstr "Івано-Франківська"
+
+#: study/models.py:607 study/models.py:634
+msgid "Kharkivska"
+msgstr "Харківська"
+
+#: study/models.py:608 study/models.py:635
+msgid "Khersonska"
+msgstr "Херсонська"
+
+#: study/models.py:609 study/models.py:636
+msgid "Khmelnytska"
+msgstr "Хмельницька"
+
+#: study/models.py:610 study/models.py:637
+msgid "Kirovohradska"
+msgstr "Кіровоградська"
+
+#: study/models.py:611 study/models.py:638
+msgid "Kyiv"
+msgstr "Київ"
+
+#: study/models.py:612 study/models.py:639
+msgid "Kyivska"
+msgstr "Київська"
+
+#: study/models.py:613 study/models.py:640
+msgid "Luhanska"
+msgstr "Луганська"
+
+#: study/models.py:614 study/models.py:641
+msgid "Lvivska"
+msgstr "Львівська"
+
+#: study/models.py:615 study/models.py:642
+msgid "Mykolayivska"
+msgstr "Миколаївська"
+
+#: study/models.py:616 study/models.py:643
+msgid "Odeska"
+msgstr "Одеська"
+
+#: study/models.py:617 study/models.py:644
+msgid "Poltavska"
+msgstr "Полтавська"
+
+#: study/models.py:618 study/models.py:645
+msgid "Rivnenska"
+msgstr "Рівненська"
+
+#: study/models.py:619 study/models.py:646
+msgid "Sumska"
+msgstr "Сумська"
+
+#: study/models.py:620 study/models.py:647
+msgid "Ternopilska"
+msgstr "Тернопільська"
+
+#: study/models.py:621 study/models.py:648
+msgid "Vinnytska"
+msgstr "Вінницька"
+
+#: study/models.py:622 study/models.py:649
+msgid "Volynska"
+msgstr "Волинська"
+
+#: study/models.py:623 study/models.py:650
+msgid "Zakarpatska"
+msgstr "Закарпатська"
+
+#: study/models.py:624 study/models.py:651
+msgid "Zaporizka"
+msgstr "Запорізька"
+
+#: study/models.py:625 study/models.py:652
+msgid "Zhytomyrska"
+msgstr "Житомирська"
+
+#: study/models.py:654
+msgid "region"
+msgstr "Область"
+
+#: study/models.py:658
+msgid "principal investigator phone number"
+msgstr "Номер телефону відповідального дослідника"
+
+#: study/models.py:660
+msgid "medical institution"
+msgstr "Медичний заклад"
+
+#: study/models.py:661
+msgid "medical institution department"
+msgstr "Відділення медичного закладу"
+
+#: study/models.py:664
+msgid "web site"
+msgstr "Веб-сайт медичного закладу"
+
+#: study/models.py:667
 msgid "medical institution department phone number"
-msgstr ""
+msgstr "Номер телефону відділення медичного закладу"
 
-#: study/models.py:595
+#: study/models.py:669
 msgid "medical institution department fax"
-msgstr ""
+msgstr "Факс відділення медичного закладу"
 
-#: study/models.py:596
+#: study/models.py:671
 msgid "medical educational institution"
-msgstr ""
+msgstr "Вищий медичний навчальний заклад"
 
-#: study/models.py:597
+#: study/models.py:673
 msgid "medical educational institution department"
-msgstr ""
+msgstr "Кафедра вищого медичного навчального закладу"
 
-#: study/models.py:598
+#: study/models.py:675
 msgid "medical institution contact person name"
-msgstr ""
+msgstr "П.І.Б. контактної особи від «Медичний заклад»"
 
-#: study/models.py:599
+#: study/models.py:677
 msgid "company contact person name"
-msgstr ""
+msgstr "П.І.Б. контактної особи від «Компанія»"
 
-#: study/models.py:600
-msgid "conact person phone number"
-msgstr ""
+#: study/models.py:679
+msgid "contact person phone number"
+msgstr "Номер телефону контактної особи"
 
-#: study/models.py:601
-msgid "conact person fax"
-msgstr ""
+#: study/models.py:681
+msgid "contact person fax"
+msgstr "Факс контактної особи"
 
-#: study/models.py:602
-msgid "conact person email"
-msgstr ""
+#: study/models.py:682
+msgid "contact person email"
+msgstr "Електронна пошта контактної особи"
 
-#: study/models.py:605
-msgid "Not recriuting"
-msgstr ""
-
-#: study/models.py:611
+#: study/models.py:691
 msgid "recruiting status clinicaltrials"
-msgstr ""
+msgstr "Статус набору пацієнтів (здорових добровольців), за даними clinicaltrials.gov"
 
-#: study/models.py:613
+#: study/models.py:693
 msgid "recruiting status MOH of Ukraine"
-msgstr ""
+msgstr "Статус набору пацієнтів (здорових добровольців), за даними МОЗ України"
 
-#: study/models.py:615
+#: study/models.py:695
 msgid "recruiting status company"
-msgstr ""
+msgstr "Статус набору пацієнтів (здорових добровольців), за даними «Компанія»"
 
-#: study/models.py:619
+#: study/models.py:699
 msgid "place"
-msgstr ""
+msgstr "Клінічна база"
 
-#: study/models.py:620
+#: study/models.py:700
 msgid "places"
-msgstr ""
+msgstr "Клінічні бази"
+
+#: study/models.py:715
+#, fuzzy
+#| msgid "study type"
+msgid "study"
+msgstr "Тип клінічного дослідження"
+
+#: study/models.py:716
+#, fuzzy
+#| msgid "study design"
+msgid "studies"
+msgstr "Дизайн клінічного дослідження"
+
+#~ msgid "Choose condition"
+#~ msgstr "Виберіть назву захворювання"
+
+#~ msgid "disease name"
+#~ msgstr "назва захворювання"
+
+#~ msgid "decease_name"
+#~ msgstr "назва захворювання"
+
+#~ msgid "On invitation recruiting"
+#~ msgstr ""
+#~ "Це дослідження на даний час набирає пацієнтів (здорових добровольців) "
+#~ "тільки за запрошенням"
+
+#~ msgid "Study end"
+#~ msgstr "Дане клінічне дослідження завершено"
+
+#~ msgid "Study pause"
+#~ msgstr "Дане клінічне дослідження було припинено"
+
+#~ msgid "Study terminated before recruiting"
+#~ msgstr ""
+#~ "Дане клінічне дослідження було відкликано до початку набору пацієнтів "
+#~ "(здорових добровольців)"
+
+#~ msgid "Study status unknown"
+#~ msgstr ""
+#~ "Статус набора пацієнтів (здорових добровольців) в дане дослідження є "
+#~ "невідомим, тому що інформація чи не була надана, чи не була підтверджена"
+
+#~ msgid "Not healthy recruits"
+#~ msgstr "В дане дослідження пацієнті (здорові добровольці) не набираються"

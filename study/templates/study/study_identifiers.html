@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block head_title %}Welcome!{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-10">
+              <h2 style="text-align: center; text-decoration: underline;">Ідентифікатор клінічного дослідження</h2>
+                <br>
+              {% include 'includes/navtabs.html'%}
+              <table class="table table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Константа</th>
+                    <th>Відповідь</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Код клінічного дослідження (надається Спонсором)</td>
+                    <td>PEN-PV‎</td>
+                  </tr>
+                  <tr>
+                    <td>СlinicalTrials.com.ua ідентифікатор</td>
+                    <td>1-2015</td>
+                  </tr>
+                  <tr>
+                    <td>ClinicalTrials.gov ідентифікатор</td>
+                    <td>NCT02523638</td>
+                  </tr>
+                  <tr>
+                    <td>EudraCT номер</td>
+                    <td>2014-001356-31</td>
+                    </tr>
+                  <tr>
+                    <td>Спонсор, країна</td>
+                    <td>"Ей Оу Пі Орфан Фармасьютикалз АГ", Австрія</td>
+                  </tr>
+                  <tr>
+                    <td>Компанія, яка контролює проведення клінічного дослідження в Україні</td>
+                    <td>ТОВ "ПІ ЕС АЙ-Україна"</td>
+                  </tr>
+                  <tr>
+                    <td>Запланована кількість пацієнтів (здорових добровольців), в цілому</td>
+                    <td>30</td>
+                  </tr>
+                  <tr>
+                    <td>Запланована кількість пацієнтів (здорових добровольців) в Україні, за даними МОЗ України</td>
+                    <td>8</td>
+                  </tr>
+                  <tr>
+                    <td>Дата початку набору пацієнтів (здорових добровольців)  в Україні</td>
+                    <td>22.05.2015</td>
+                  </tr>
+                  <tr>
+                    <td>Статус клінічного дослідження</td>
+                    <td>Дане клінічне дослідження завершено</td>
+                  </tr>
+                  <tr>
+                    <td>Дата завершення клінічного дослідження</td>
+                    <td>Грудень 2015</td>
+                  </tr>
+                  <tr>
+                    <td>Останнє оновлення інформації об клінічному випробуванні на сайті СlinicalTrials.com.ua</td>
+                    <td>16 Лютого 2016</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-xs-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-10">
+                <a href="{% url 'study:study' %}"><h5>До списку досліджень</h5></a>
+            </div>
+            <div class="col-xs-1"></div>
+        </div>
+    </div>
+{% endblock %}

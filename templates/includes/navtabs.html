@@ -1,4 +1,5 @@
 <ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" {%  if '/study_identifiers' in request.path %}class="active"{% endif %}><a href="{% url 'study:study_identifiers' %}">Ідентифікатор клінічного дослідження</a></li>
   <li role="presentation" {%  if '/basic_information' in request.path %}class="active"{% endif %}><a href="{% url 'study:basic_information' %}">Базова інформація</a></li>
   <li role="presentation" {%  if '/eligibility' in request.path %}class="active"{% endif %}><a href="{% url 'study:eligibility' %}">Критерії відбору</a></li>
   <li role="presentation" {%  if '/place' in request.path %}class="active"{% endif %}><a href="{% url 'study:place' %}">Місця проведення</a></li>
